@@ -23,7 +23,7 @@ export default {
         customLunarGreen: "#354733",
         customDarkGreen:"#158212",
         customGreen:"#83E281",
-        customLightGreen: "#F6FFF6",
+        customLightGreen: "#F6FFF6"
       }
     },
   },
