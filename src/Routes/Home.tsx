@@ -1,9 +1,9 @@
-import Promotion from "../components/Home/Promotion"
+// import Promotion from "../components/Home/Promotion"
 
 const Home = () => {
   return (
     <div>
-      <Promotion />
+      {/* <Promotion /> */}
     </div>
   )
 }
