@@ -1,83 +1,29 @@
-import { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
-import plantPiece from "../assets/plantPiece-black.svg"
-import UserLogin from "./UserLogin"
-import burgerBtn from "../assets/burger-btn.svg"
-import closeBtn from "../assets/close-btn.svg"
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [navBarExpanded, setNavBarExpanded] = useState<boolean>(false)
-  const [userLogin, setUserLogin] = useState<boolean>(false)
-
-  useEffect(() => {
-    const monitorScreenSize = () => {
-      // window.innerWidth > 768 ?  :
-
-      if (window.innerWidth > 768) {
-        setUserLogin(true)
-        setNavBarExpanded(false)
-      } else setUserLogin(false)
-    }
-
-    window.addEventListener("resize", monitorScreenSize)
-    window.addEventListener("load", monitorScreenSize)
-  }, [userLogin, navBarExpanded])
-
-  const handleMenuBtnClick = () => {
-    setNavBarExpanded((prevState) => !prevState)
-  }
-
-  const shownMenuClasses =
-    "aria-expanded:block aria-expanded:absolute aria-expanded:right-0 aria-expanded:top-20 aria-expanded:bg-customWisper aria-expanded:w-full"
-
   return (
-    <header className="flex items-center justify-between font-raleway bg-customWisper p-4">
-      <img className="md:ml-16" src={plantPiece} alt="plantPeace logo" />
-      <nav
-        id="navbar"
-        aria-expanded={navBarExpanded}
-        className={`hidden md:block  z-50 ${
-          navBarExpanded && shownMenuClasses
-        }`}
-      >
-        <ul
-          id="navbar-menu"
-          aria-expanded={navBarExpanded}
-          className="flex flex-row aria-expanded:flex-col aria-expanded:items-end aria-expanded:mr-4 items-center gap-6 *:text-customLunarGreen hover:*:text-customAvocado"
-        >
+    <header className="flex items-center justify-between mx-2">
+      <h1>LOGO</h1>
+      <nav >
+        <ul className="flex items-center gap-2">
           <li>
-            <NavLink className="nav-link" to="/">
-              Home
-            </NavLink>
+            <NavLink to={"/"}>Home</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/register">
-              Register
-            </NavLink>
+            <NavLink to={"/register"}>Register</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/products">
-              Products
-            </NavLink>
+            <NavLink to={"/products"}>Products</NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/about-us">
-              About us
-            </NavLink>
-          </li>
-          <li className="md:hidden">
-            <UserLogin />
+            <NavLink to={"/about-us"}>About us</NavLink>
           </li>
         </ul>
       </nav>
 
-      {userLogin && <UserLogin />}
-
-      <button className="inline-block md:hidden" onClick={handleMenuBtnClick}>
-        <img src={navBarExpanded ? closeBtn : burgerBtn} alt="" />
-      </button>
+      <h1>icon</h1>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
