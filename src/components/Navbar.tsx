@@ -11,8 +11,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const monitorScreenSize = () => {
-      // window.innerWidth > 768 ?  :
-
       if (window.innerWidth > 768) {
         setUserLogin(true)
         setNavBarExpanded(false)
