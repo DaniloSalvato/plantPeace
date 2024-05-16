@@ -12,7 +12,7 @@ export default function ProductDetailPage() {
       const res = await fetch("http://localhost:3000/plants/")
       const json = await res.json()
       const jsonFiltered = json.filter(
-        ({ id }: IPlantProps) => id === Number(param.id)
+        ({ id }: IPlantProps) => id == Number(param.id)
       )
       setPlant(jsonFiltered[0])
     }
@@ -21,7 +21,9 @@ export default function ProductDetailPage() {
   }, [])
 
   if (!plant) {
-    return <p className="text-4xl font-bold">Loading...</p>
+    return (
+      <p className="text-center font-lato text-4xl font-bold">Loading...</p>
+    )
   }
 
   return (

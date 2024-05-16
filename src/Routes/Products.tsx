@@ -19,7 +19,7 @@ const Products = () => {
         Products
       </h1>
 
-      <section className="flex flex-wrap gap-10">
+      <section className="flex flex-wrap justify-center gap-10">
         {plants && plants.map((plant) => <Product key={plant.id} {...plant} />)}
       </section>
     </main>
