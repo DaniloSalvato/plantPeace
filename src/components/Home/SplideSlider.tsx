@@ -16,10 +16,10 @@ const SplideSlider = ({ images }: Images) => {
         arrows: false,
         pagination: false,
         autoplay: false,
-        rewind: false, 
-        autoWidth : true,
-        autoHeight : true,
-        gap: '4rem'
+        rewind: false,
+        autoWidth: true,
+        autoHeight: true,
+        gap: "4rem"
       }}
       aria-label="My favorite Images"
     >

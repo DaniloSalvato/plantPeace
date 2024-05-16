@@ -35,7 +35,6 @@ const PlantCard = ({ title, price, promo, category, imageUrl }: PlantProps) => {
           </div>
 
         </div>
-
       </div>
     </>
   );
