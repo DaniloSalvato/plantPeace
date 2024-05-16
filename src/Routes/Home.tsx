@@ -1,8 +1,7 @@
-import PlantCare from "../components/Home/PlantCare";
 
 const Home = () => {
   return (
-    <PlantCare />
+    <div>Home</div>
   )
 }
 
