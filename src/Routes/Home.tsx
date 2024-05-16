@@ -1,10 +1,8 @@
-// import Promotion from "../components/Home/Promotion"
+import PlantCare from "../components/Home/PlantCare";
 
 const Home = () => {
   return (
-    <div>
-      {/* <Promotion /> */}
-    </div>
+    <PlantCare />
   )
 }
 
