@@ -11,8 +11,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const monitorScreenSize = () => {
-      // window.innerWidth > 768 ?  :
-
       if (window.innerWidth > 768) {
         setUserLogin(true)
         setNavBarExpanded(false)
@@ -36,7 +34,9 @@ const Navbar = () => {
       <nav
         id="navbar"
         aria-expanded={navBarExpanded}
-        className={`hidden md:block  ${navBarExpanded && shownMenuClasses}`}
+        className={`hidden md:block  z-50 ${
+          navBarExpanded && shownMenuClasses
+        }`}
       >
         <ul
           id="navbar-menu"

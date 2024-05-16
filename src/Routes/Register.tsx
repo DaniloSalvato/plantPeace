@@ -10,9 +10,7 @@ const Register = () => {
           </h1>
 
           <div className="flex flex-col font-inter mt-4 text-sm">
-            <label className="text-customIBBNB font-medium">
-              Plant Name
-            </label>
+            <label className="text-customIBBNB font-medium">Plant Name</label>
             <input
               type="text"
               placeholder="Echinocereus Cactus"
@@ -111,10 +109,14 @@ const Register = () => {
         </form>
       </section>
       <section className="flex-1 hidden sm:block sm:w-full bg-customWisper">
-       <img src={imgRight} alt="" className="hidden sm:block lg:w-full h-full object-cover filter grayscale"/>
+        <img
+          src={imgRight}
+          alt=""
+          className="hidden sm:block lg:w-full h-full object-cover filter grayscale"
+        />
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

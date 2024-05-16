@@ -1,5 +1,3 @@
-
-
 import img3 from "../../assets/img-promo.jpg";
 import img1 from "../../assets/img1-container-3.png";
 import img2 from "../../assets/img2-container3.png";
