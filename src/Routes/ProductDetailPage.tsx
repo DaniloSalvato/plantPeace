@@ -54,7 +54,11 @@ export default function ProductDetailPage() {
           <section className="*:p-2">
             <h2 className="font-lato text-xl font-bold">Features</h2>
 
-            <p className="font-raleway">{plant.features}</p>
+            <ul className="font-raleway list-disc list-inside">
+              {plant.features.map((feature) => (
+                <li key={crypto.randomUUID()}>{feature}</li>
+              ))}
+            </ul>
           </section>
 
           <section className="*:p-2">

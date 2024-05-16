@@ -6,7 +6,7 @@ export interface IPlantProps {
   price: string
   isInSale: boolean
   discountPercentage?: number
-  features: string
+  features: string[]
   description: string
   imgUrl: string
 }
