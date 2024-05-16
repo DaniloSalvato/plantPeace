@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+  @apply text-customLunarGreen;
+
+  &.active {
+    @apply text-customAvocado;
+  }
+}
+
+.splide-with-gap .splide__slide {
+  margin-right: 10px; 
+}
