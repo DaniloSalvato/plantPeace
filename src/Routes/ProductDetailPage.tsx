@@ -49,7 +49,7 @@ export default function ProductDetailPage() {
 
           <p className="font-lato text-xl font-bold">{plant.price}</p>
 
-          <button className="bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen  text-customAthenaGrey font-raleway py-5 px-14 shadow-2xl">
+          <button className="text-customAthenaGrey font-raleway py-5 px-14 shadow-2xl bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen hover:scale-105">
             Check out
           </button>
 

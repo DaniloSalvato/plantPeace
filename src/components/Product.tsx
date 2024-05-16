@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { IPlantProps } from "../types/plant"
 import Labels from "./Labels"
+import { FiArrowRight } from "react-icons/fi"
+
 export default function Product({
   id,
   imgUrl,
@@ -22,10 +24,11 @@ export default function Product({
         <Labels labels={label} />
 
         <Link
-          className="font-raleway font-medium text-customSecondary hover:underline"
+          className="flex items-center gap-2 font-raleway font-medium text-customIBBNB hover:underline"
           to={`/product/${id}`}
         >
-          See details
+          <span>See details</span>
+          <FiArrowRight />
         </Link>
       </div>
     </div>
