@@ -10,12 +10,12 @@ const Promotion = () => {
 
     const images = [img1, img2, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3, img3];
   return (
-    <section>
-      <h1 className="flex justify-center font-garamondSerif font-bold text-4xl xl:text-6xl 2xl:text-8xl text-customLunarGreen">
+    <section className="bg-customWisper">
+      <h1 className="flex justify-center font-garamondSerif font-bold text-4xl xl:text-6xl text-customLunarGreen">
         Plants In <span className="font-garamondSerif font-bold text-customAvocado pl-3">Sale</span>
       </h1>
 
-      <div className="pt-12 pl-10 xl:pt-24 xl:pl-20">
+      <div className="pt-20 pl-10 pb-20">
         <SplideSlider images={images}/>
       </div>
     </section>

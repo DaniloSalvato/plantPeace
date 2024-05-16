@@ -24,6 +24,10 @@ export default {
         customDarkGreen:"#158212",
         customGreen:"#83E281",
         customLightGreen: "#F6FFF6",
+      },
+      spacing: {
+        plantCard: '560.18px',
+
       }
     },
   },
