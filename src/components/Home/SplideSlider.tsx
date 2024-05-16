@@ -10,19 +10,28 @@ const SplideSlider = ({ images }: Images) => {
   return (
     <Splide
       options={{
-        type: 'slide',
-        heightRatio: 0.5,
+        type: "slide",
+        height: "auto",
+        width: "auto",
         arrows: false,
-        pagination: false, 
+        pagination: false,
         autoplay: false,
-        rewind: true,
+        rewind: false,
+        autoWidth: true,
+        autoHeight: true,
+        gap: "4rem"
       }}
       aria-label="My favorite Images"
-      className="splide-with-gap"
     >
       {images.map((image, index) => (
         <SplideSlide key={index}>
-          <PlantCard title={"teste"} price={0} promo={0} category={"teste2"} imageUrl={image}/>
+          <PlantCard
+            title={"teste"}
+            price={15.0}
+            promo={15.0}
+            category={"teste2"}
+            imageUrl={image}
+          />
         </SplideSlide>
       ))}
     </Splide>
