@@ -27,19 +27,6 @@ const Form = () => {
     description: null,
   });
 
-  // const handleChangeInput = useCallback(
-  //   (event: React.ChangeEvent<HTMLFormElement>) => {
-  //     const targetInput = event.currentTarget;
-  //     const { value, name } = targetInput;
-
-  //     setPlantForm(() => ({
-  //       ...plantForm,
-  //       [name]: value,
-  //     }));
-  //   },
-  //   [plantForm]
-  // );
-
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
@@ -176,13 +163,14 @@ const Form = () => {
 
   const sendData = async () => {
     const req = {
-      plantName: plantForm.plantName,
-      plantSubtitle: plantForm.plantSubtitle,
+      name: plantForm.plantName,
+      subtitle: plantForm.plantSubtitle,
       price: plantForm.price,
       discountPercentage: plantForm.discountPercentage,
       label: [plantForm.label, plantForm.plantType],
       features: plantForm.features,
       description: plantForm.description,
+      imgUrl: "/src/assets/img0-container-3.png"
     };
     try {
       await fetch("http://localhost:3000/plants", {
