@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import imgRight from "../../assets/main-plant.png";
 
 import { IFormErrors, IPlantFormState } from "../../types/plant";
 
 const Form = () => {
-  const [done, setDone] = useState(false);
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
     plantName: "",
     plantSubtitle: "",
@@ -171,7 +170,7 @@ const Form = () => {
       if (formIsValid) {
         sendData()
       }
-    },
+    },[plantForm],
   );
 
 
@@ -210,19 +209,10 @@ const Form = () => {
     }
   };
 
-  // useEffect(() => {
-    
-
-  //     sendData();
-    
-  //   setDone(false);
-  // }, [done]);
-
   return (
     <>
       <section className="w-full flex-1 mb-4">
         <form
-          // onSubmit={handleSubmit}
           className=" flex flex-col mx-12 pt-20 md:w-2/3"
         >
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">

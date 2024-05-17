@@ -44,7 +44,7 @@ const Navbar = () => {
           className="flex flex-row aria-expanded:flex-col aria-expanded:items-end aria-expanded:mr-4 items-center gap-6 *:text-customLunarGreen hover:*:text-customAvocado"
         >
           <li>
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/home">
               Home
             </NavLink>
           </li>
