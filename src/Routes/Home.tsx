@@ -1,8 +1,15 @@
+import Discover from "../components/Home/Discover"
+import PlantCare from "../components/Home/PlantCare"
+import Promotion from "../components/Home/Promotion"
 
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Discover />
+      <PlantCare />
+      <Promotion />
+    </div>
   )
 }
 
