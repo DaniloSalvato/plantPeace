@@ -1,39 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
+
 import imgRight from "../../assets/main-plant.png";
 
-interface IPlantFormState {
-  plantName: string;
-  plantSubtitle: string;
-  plantType: string;
-  price: number;
-  discountPercentage: number;
-  label: string;
-  features: string;
-  description: string;
-}
-
-interface IFormErrors {
-  plantName: string | null;
-  plantSubtitle: string | null;
-  plantType: string | null;
-  price: number | null;
-  discountPercentage: number | null;
-  label: string | null;
-  features: string | null;
-  description: string | null;
-}
-
-interface IReqBody{
-  plantName: string | null;
-  plantSubtitle: string | null;
-  price: number | null;
-  discountPercentage: number | null;
-  label: string[] | null;
-  features: string | null;
-  description: string | null;
-}
+import { IFormErrors, IPlantFormState } from "../../types/plant";
 
 const Form = () => {
+  const [done, setDone] = useState(false);
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
     plantName: "",
     plantSubtitle: "",
@@ -56,33 +28,23 @@ const Form = () => {
     description: null,
   });
 
-  const [reqBody ,setReqBody] = useState<IReqBody>({
-      plantName: '',
-      plantSubtitle: '',
-      price: 0,
-      discountPercentage: 0,
-      label: [],
-      features: '',
-      description: ''
-  })
+  // const handleChangeInput = useCallback(
+  //   (event: React.ChangeEvent<HTMLFormElement>) => {
+  //     const targetInput = event.currentTarget;
+  //     const { value, name } = targetInput;
 
-  const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
-
-  const handleChangeInput = useCallback(
-    (event: React.ChangeEvent<HTMLFormElement>) => {
-      const targetInput = event.currentTarget;
-      const { value, name } = targetInput;
-
-      setPlantForm(() => ({
-        ...plantForm,
-        [name]: value,
-      }));
-    },
-    [plantForm]
-  );
+  //     setPlantForm(() => ({
+  //       ...plantForm,
+  //       [name]: value,
+  //     }));
+  //   },
+  //   [plantForm]
+  // );
 
   const handleSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
+    (e: React.FormEvent<HTMLButtonElement>) => {
+      const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+
       e.preventDefault();
 
       const {
@@ -206,8 +168,35 @@ const Form = () => {
 
       if (!formIsValid) return;
 
-      console.log(plantForm);
+      if (formIsValid) {
+        sendData()
+      }
+    },
+  );
 
+
+  const sendData = async () => {
+    const req = {
+      plantName: plantForm.plantName,
+      plantSubtitle: plantForm.plantSubtitle,
+      price: plantForm.price,
+      discountPercentage: plantForm.discountPercentage,
+      label: [plantForm.label, plantForm.plantType],
+      features: plantForm.features,
+      description: plantForm.description,
+    };
+    try {
+      await fetch("http://localhost:3000/plants", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(req),
+      });
+      console.log("Dados enviados com sucesso!");
+    } catch (error) {
+      console.error("Erro ao enviar os dados:", error);
+    } finally {
       setPlantForm({
         plantName: "",
         plantSubtitle: "",
@@ -218,48 +207,22 @@ const Form = () => {
         features: "",
         description: "",
       });
-    },
-    [plantForm]
-  );
-
-  useEffect(() => {
-
-    const reqBody = {
-      plantName: plantForm.plantName,
-      plantSubtitle: plantForm.plantSubtitle,
-      price: plantForm.price,
-      discountPercentage: plantForm.discountPercentage,
-      label: [plantForm.label, plantForm.plantType],
-      features: plantForm.features,
-      description: plantForm.description
-    };
-
-    const sendData = async () => {
-      try {
-
-        await fetch("http://localhost:3000/plants", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(reqBody),
-        });
-        console.log('Dados enviados com sucesso!');
-      } catch (error) {
-        console.error('Erro ao enviar os dados:', error);
-      }
-    };
-
-    if (Object.keys(reqBody).length > 0) {
-      sendData();
     }
-  },[plantForm]);
+  };
+
+  // useEffect(() => {
+    
+
+  //     sendData();
+    
+  //   setDone(false);
+  // }, [done]);
 
   return (
     <>
       <section className="w-full flex-1 mb-4">
         <form
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           className=" flex flex-col mx-12 pt-20 md:w-2/3"
         >
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">
@@ -273,7 +236,7 @@ const Form = () => {
               placeholder="Echinocereus Cactus"
               name="plantName"
               value={plantForm.plantName}
-              className="px-4 py-2 mt-2 w-full border border-customGray rounded text-sm text-black"
+              className="px-4 py-2 mt-2 w-full border border-customGray rounded text-sm text-black bg-customWisper"
               onChange={(e) =>
                 setPlantForm((prev) => ({
                   ...prev,
@@ -295,7 +258,7 @@ const Form = () => {
               name="plantSubtitle"
               value={plantForm.plantSubtitle}
               placeholder="A majestic addition to your plant collection"
-              className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black"
+              className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black bg-customWisper"
               onChange={(e) =>
                 setPlantForm((prev) => ({
                   ...prev,
@@ -319,7 +282,7 @@ const Form = () => {
               name="plantType"
               value={plantForm.plantType}
               placeholder="Cactus"
-              className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black"
+              className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black bg-customWisper"
               onChange={(e) =>
                 setPlantForm((prev) => ({ ...prev, plantType: e.target.value }))
               }
@@ -339,7 +302,7 @@ const Form = () => {
                 name="price"
                 value={plantForm.price}
                 placeholder="$139.99"
-                className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black"
+                className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black bg-customWisper"
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
@@ -361,7 +324,7 @@ const Form = () => {
                 name="discountPercentage"
                 value={plantForm.discountPercentage}
                 placeholder="20%"
-                className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black"
+                className="border border-customGray rounded px-4 py-2 mt-2 text-sm text-black bg-customWisper"
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
@@ -377,7 +340,7 @@ const Form = () => {
             </div>
           </div>
 
-          <fieldset className="flex font-inter mt-4 gap-4 items-center justify-start accent-customLunarGreen">
+          <fieldset className="flex font-inter mt-4 gap-4 items-center justify-start accent-customLunarGreen bg-customWisper">
             <legend className="font-inter text-customIBBNB font-semibold mb-2">
               Label:
             </legend>
@@ -429,14 +392,14 @@ const Form = () => {
             <textarea
               name="features"
               value={plantForm.features}
-              className="border border-customGray rounded px-4 py-2 pb-10 mt-2 text-sm text-black"
+              className="border border-customGray rounded px-4 py-2 pb-10 mt-2 text-sm text-black bg-customWisper"
               placeholder="Species: Echinocereus..."
               onChange={(e) =>
                 setPlantForm((prev) => ({ ...prev, features: e.target.value }))
               }
             ></textarea>
-            {errors?.plantName && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantName}</p>
+            {errors?.features && (
+              <p className="text-red-700 text-sm mt-1">{errors?.features}</p>
             )}
           </div>
 
@@ -447,7 +410,7 @@ const Form = () => {
             <textarea
               name="description"
               value={plantForm.description}
-              className="border border-customGray rounded px-4 py-2 pb-10 mt-2 text-sm text-black"
+              className="border border-customGray rounded px-4 py-2 pb-10 mt-2 text-sm text-black bg-customWisper"
               placeholder="Ladyfinger cactus..."
               onChange={(e) =>
                 setPlantForm((prev) => ({
@@ -456,11 +419,11 @@ const Form = () => {
                 }))
               }
             ></textarea>
-            {errors?.plantName && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantName}</p>
+            {errors?.description && (
+              <p className="text-red-700 text-sm mt-1">{errors?.description}</p>
             )}
           </div>
-          <button className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-16 py-2">
+          <button onClick={handleSubmit} className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-16 py-2">
             Register
           </button>
         </form>
