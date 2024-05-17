@@ -22,17 +22,32 @@
       "imgUrl": "/src/assets/img0-container-3.png"
     },
     {
-      "id": "9d87",
-      "plantName": "sdasdasdasyugdyasd",
-      "plantSubtitle": "asdfasdfsdfsadfsd",
+      "id": "a57b",
+      "name": "fkjksdfkhdjskf",
+      "subtitle": "asdfasdfasdf",
       "price": 12,
-      "discountPercentage": 12,
+      "discountPercentage": 0,
+      "label": [
+        "outdoor",
+        "asdfasdf"
+      ],
+      "features": "qwerwerqer",
+      "description": "qwerwqer",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "38c4",
+      "name": "ihasihasijhas",
+      "subtitle": "asdfsadfasd",
+      "price": 12,
+      "discountPercentage": 5,
       "label": [
         "indoor",
-        "asdfasdfasdfsdf"
+        "asdfsdfsdf"
       ],
-      "features": "qeqwreqwfdasdfd",
-      "description": "werwerwerwerwer"
+      "features": "hdgjkasdgjsagdhj\n",
+      "description": "aisdgasghdkhjasdkjhakjshd",
+      "imgUrl": "/src/assets/img0-container-3.png"
     }
   ]
 }

@@ -1,12 +1,11 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
 import PlantCard from "./PlantCard";
+import { IPlantProps } from "../../types/plant";
 
-type Images = {
-  images: string[];
-};
 
-const SplideSlider = ({ images }: Images) => {
+
+const SplideSlider = ( {plants} : IPlantProps[]) => {
   return (
     <Splide
       options={{
@@ -23,14 +22,14 @@ const SplideSlider = ({ images }: Images) => {
       }}
       aria-label="My favorite Images"
     >
-      {images.map((image, index) => (
-        <SplideSlide key={index}>
+      {plants.map((plant: IPlantProps) => (
+        <SplideSlide key={plant.name}>
           <PlantCard
-            title={"teste"}
-            price={15.0}
-            promo={15.0}
-            category={"teste2"}
-            imageUrl={image}
+            title={plant.name}
+            price={+plant.price}
+            promo={+plant.discountPercentage}
+            category={plant.label}
+            imageUrl={plant.imgUrl}
           />
         </SplideSlide>
       ))}

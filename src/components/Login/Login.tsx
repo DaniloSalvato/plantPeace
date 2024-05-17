@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div>
       <h1>Sign in button</h1>
-      <SignInButton mode="redirect" forceRedirectUrl="/home" />
+      <button className='border'><SignInButton mode="redirect" forceRedirectUrl="/home" /></button>
     </div>
   )
 }

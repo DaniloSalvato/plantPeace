@@ -2,7 +2,7 @@ type PlantProps = {
   title: string;
   price: number;
   promo: number;
-  category: string;
+  category: string[];
   imageUrl: string;
 };
 
@@ -28,7 +28,7 @@ const PlantCard = ({ title, price, promo, category, imageUrl }: PlantProps) => {
 
             <div className="mt-5">
               <span className="py-2 px-3 text-customAvocado border border-customAvocado rounded-full">
-                {category}
+                {category[0]}
               </span>
             </div>
 
