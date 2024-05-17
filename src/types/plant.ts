@@ -3,7 +3,7 @@ export interface IPlantProps {
   name: string
   subtitle: string
   label: string[]
-  price: string
+  price: number
   isInSale: boolean
   discountPercentage: string
   features: string[]
@@ -12,23 +12,23 @@ export interface IPlantProps {
 }
 
 export interface IPlantFormState {
-  plantName: string;
-  plantSubtitle: string;
-  plantType: string;
-  price: number;
-  discountPercentage: number;
-  label: string;
-  features: string;
-  description: string;
+  plantName: string
+  plantSubtitle: string
+  plantType: string
+  price: number
+  discountPercentage: number
+  label: string
+  features: string
+  description: string
 }
 
 export interface IFormErrors {
-  plantName: string | null;
-  plantSubtitle: string | null;
-  plantType: string | null;
-  price: string | null;
-  discountPercentage: string | null;
-  label: string | null;
-  features: string | null;
-  description: string | null;
+  plantName: string | null
+  plantSubtitle: string | null
+  plantType: string | null
+  price: string | null
+  discountPercentage: string | null
+  label: string | null
+  features: string | null
+  description: string | null
 }

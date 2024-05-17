@@ -7,18 +7,20 @@ import closeBtn from "../assets/close-btn.svg"
 
 const Navbar = () => {
   const [navBarExpanded, setNavBarExpanded] = useState<boolean>(false)
-  const [userLogin, setUserLogin] = useState<boolean>(false)
+  const [userLogin, setUserLogin] = useState<boolean>(true)
 
   useEffect(() => {
-    const monitorScreenSize = () => {
-      if (window.innerWidth > 768) {
+    function monitorScreenSize() {
+      if (window.screen.width > 768) {
         setUserLogin(true)
         setNavBarExpanded(false)
+        setUserLogin(true)
       } else setUserLogin(false)
     }
 
-    window.addEventListener("resize", monitorScreenSize)
+    monitorScreenSize()
     window.addEventListener("load", monitorScreenSize)
+    window.addEventListener("resize", monitorScreenSize)
   }, [userLogin, navBarExpanded])
 
   const handleMenuBtnClick = () => {
@@ -72,7 +74,10 @@ const Navbar = () => {
       {userLogin && <UserLogin />}
 
       <button className="inline-block md:hidden" onClick={handleMenuBtnClick}>
-        <img src={navBarExpanded ? closeBtn : burgerBtn} alt="" />
+        <img
+          src={navBarExpanded ? closeBtn : burgerBtn}
+          alt="Burguer menu icon and cross mark when expanded"
+        />
       </button>
     </header>
   )

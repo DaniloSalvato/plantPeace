@@ -4,11 +4,8 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "indoor",
-        "cactus"
-      ],
-      "price": "$139.99",
+      "label": ["indoor", "cactus"],
+      "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
       "features": [
@@ -19,34 +16,6 @@
         "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."
       ],
       "description": "Ladyfinger cactus (Echinocereus pentalophus) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
-      "imgUrl": "/src/assets/img0-container-3.png"
-    },
-    {
-      "id": "a57b",
-      "name": "fkjksdfkhdjskf",
-      "subtitle": "asdfasdfasdf",
-      "price": 12,
-      "discountPercentage": 0,
-      "label": [
-        "outdoor",
-        "asdfasdf"
-      ],
-      "features": "qwerwerqer",
-      "description": "qwerwqer",
-      "imgUrl": "/src/assets/img0-container-3.png"
-    },
-    {
-      "id": "38c4",
-      "name": "ihasihasijhas",
-      "subtitle": "asdfsadfasd",
-      "price": 12,
-      "discountPercentage": 5,
-      "label": [
-        "indoor",
-        "asdfsdfsdf"
-      ],
-      "features": "hdgjkasdgjsagdhj\n",
-      "description": "aisdgasghdkhjasdkjhakjshd",
       "imgUrl": "/src/assets/img0-container-3.png"
     }
   ]
