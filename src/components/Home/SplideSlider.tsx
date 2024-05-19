@@ -3,9 +3,11 @@ import "@splidejs/splide/css";
 import PlantCard from "./PlantCard";
 import { IPlantProps } from "../../types/plant";
 
+type Data = {
+  plants: IPlantProps[]
+}
 
-
-const SplideSlider = ( {plants} : IPlantProps[]) => {
+const SplideSlider = ( {plants} : Data) => {
   return (
     <Splide
       options={{

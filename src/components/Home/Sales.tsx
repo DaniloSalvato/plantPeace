@@ -2,15 +2,22 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
 // importação de imagens
-import image01 from "../../assets/img0-container-3.png";
-import image02 from "../../assets/img1-container-3.png";
-import image03 from "../../assets/img2-container3.png";
-import image04 from "../../assets/img-promo.jpg";
 import SplideSlider from './SplideSlider';
+import { IPlantProps } from '../../types/plant';
+import { useEffect, useState } from 'react';
 
 // componente que cria um array
 const Sales = () => {
-    const images=[image01, image02, image03, image04]
+    const [plants, setPlants] = useState<IPlantProps[] | null>(null)
+        useEffect(() => {
+        async function getPlants() {
+        const res = await fetch("http://localhost:3000/plants")
+        const json = await res.json()
+        setPlants(json)
+    }
+    getPlants()
+  },[])
+    
     return( // retorno de um elemento JSX < />
         <section className='bg-customWisper'>
             
@@ -19,7 +26,7 @@ const Sales = () => {
             </h1>
 
             <div className="pt-20 pl-10 pb-20">
-                <SplideSlider images={images} />
+                {plants && <SplideSlider plants={plants} />}
             </div>
         </section>
     )
