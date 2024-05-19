@@ -53,7 +53,7 @@ const PlantCard = ({
               </span>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </Link>
     </>
   );

@@ -3,8 +3,8 @@ import "@splidejs/splide/css";
 import PlantCard from "./PlantCard";
 import { IPlantProps } from "../../types/plant";
 
-type Data ={
-  plants :IPlantProps[]
+type Data = {
+  plants: IPlantProps[]
 }
 
 const SplideSlider = ( {plants} : Data) => {

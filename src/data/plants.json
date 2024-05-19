@@ -105,6 +105,23 @@
       ],
       "description": "asddfgçfhnçlkflhjkçlfgkhlfkgçhlkfçglhklfkhçlkfglhk",
       "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "438554",
+      "name": "ghfASHGJFAHGSFVA",
+      "subtitle": "AJSHGFDHGAFSGD",
+      "label": [
+        "indoor",
+        "ASDHGASHJD"
+      ],
+      "price": 123333333,
+      "isInSale": true,
+      "discountPercentage": 12,
+      "features": [
+        "ASDASD"
+      ],
+      "description": "SADFTASFDAS",
+      "imgUrl": "/src/assets/img0-container-3.png"
     }
   ]
 }

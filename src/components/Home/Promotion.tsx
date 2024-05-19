@@ -25,7 +25,7 @@ const Promotion = () => {
 
       <div className="pt-20 pl-10 pb-20">
         {plants && (
-          <SplideSlider plants={plants!.filter((plants) => plants.isInSale)} />
+          <SplideSlider plants={plants.filter((plants) => plants.isInSale)} />
         )}
       </div>
     </section>
