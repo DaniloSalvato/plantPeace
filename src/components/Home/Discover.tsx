@@ -1,23 +1,27 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { FaMinus } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Discover = () => {
-   
   return (
     <div className= "columns-2 flex bg-customWisper">
                  
-        <div className="w-1/2 md:w-full">
-            <div className="">
+        <div className="w-1/2 md:w-full h-screen">
+            <div className="absolute">
             <p className="font-cursive px-10 py-8 text-1xl flex items-center"><FaMinus className="mr-2"/>Love for Nature</p> 
             <p className="font-garamondSerif px-10 font-bold text-5xl text-customLunarGreen">Discover Your <span className="text-customAvocado">Green</span> <br/> Side</p>
             <p className="font-raleway text-customSecondary px-10 text-sm py-3">We are your one-stop destination for all things green and growing. Our website <br/> offers a wide array of stunning plants, ranging from vibrant flowers  to lush indoor <br/> foliage, allowing you to create your very own green oasis. </p>
-            <button className="bg-customLunarGreen hover:bg-green-900 text-white font-raleway py-2 px-7 flex justify-start m-10 my-2">
+            <Link to={"*"}>
+            <button className= "bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen text-customAthenaGrey font-raleway py-2 px-7 flex justify-start m-10 my-2 shadow-2xl z-10 relative">
             Shop now
             </button>
+            </Link>
 
-            <div className="relative h-40 w-40">
-            <img className="grayscale" src="/src/assets/secondary-plant.png" alt=""/></div>
-            <div className="flex bottom-0 right-0 font-raleway text-customSecondary px-10 text-sm items-center">Learn Gardening <FiArrowRight className="mr-3 cursor-pointer space-x-2"/></div>
+            <div className="hidden sm:block sm:relative sm:w-full sm:h-full">
+            <img className="sm:grayscale sm:absolute lg:-top-24 lg:left-0 z-0" src="/src/assets/secondary-plant.png" alt=""/></div>
+            <Link to={"*"}>
+            <div className="absolute z-10 flex lg:-bottom-80 lg:left-20 hover:text-customLunarGreen font-raleway text-customSecondary px-10 text-sm items-center">Learn Gardening <FiArrowRight className="mr-3 cursor-pointer space-x-2"/></div>
+            </Link>
 
             </div>
 

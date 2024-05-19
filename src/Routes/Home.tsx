@@ -8,7 +8,7 @@ const Home = () => {
       <Discover />
       <PlantCare />
       <Promotion />
-    </div>
+     </div>
   );
 };
 
