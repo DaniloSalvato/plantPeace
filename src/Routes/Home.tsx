@@ -10,7 +10,7 @@ const Home = () => {
       <PlantCare />
       <Sales />
       <Promotion />
-    </div>
+     </div>
   );
 };
 
