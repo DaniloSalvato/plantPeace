@@ -14,8 +14,6 @@ const Promotion = () => {
     getPlants();
   }, []);
 
-  const inSale = plants!.filter(plants => plants.isInSale);
-
   return (
     <section className="bg-customWisper">
       <h1 className="flex justify-center font-garamondSerif font-bold text-4xl xl:text-6xl text-customLunarGreen">
@@ -26,7 +24,9 @@ const Promotion = () => {
       </h1>
 
       <div className="pt-20 pl-10 pb-20">
-        {plants && <SplideSlider plants={inSale} />}
+        {plants && (
+          <SplideSlider plants={plants!.filter((plants) => plants.isInSale)} />
+        )}
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ type Data ={
 }
 
 const SplideSlider = ( {plants} : Data) => {
+
   return (
     <Splide
       options={{

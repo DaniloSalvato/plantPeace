@@ -155,11 +155,11 @@ const Form = () => {
       if (!formIsValid) return;
 
       if (formIsValid) {
-        sendData()
+        sendData();
       }
-    },[plantForm],
+    },
+    [plantForm]
   );
-
 
   const sendData = async () => {
     const req = {
@@ -168,11 +168,11 @@ const Form = () => {
       subtitle: plantForm.plantSubtitle,
       label: [plantForm.label, plantForm.plantType],
       price: plantForm.price,
-      isInSale: plantForm.discountPercentage <= 0 ? false : true ,
+      isInSale: plantForm.discountPercentage <= 0 ? false : true,
       discountPercentage: plantForm.discountPercentage,
       features: [plantForm.features],
       description: plantForm.description,
-      imgUrl: "/src/assets/img0-container-3.png"
+      imgUrl: "/src/assets/img0-container-3.png",
     };
     try {
       await fetch("http://localhost:3000/plants", {
@@ -201,9 +201,7 @@ const Form = () => {
   return (
     <>
       <section className="w-full flex-1 mb-4">
-        <form
-          className=" flex flex-col mx-12 pt-20 md:w-2/3"
-        >
+        <form className=" flex flex-col mx-12 pt-20 md:w-2/3">
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">
             Plant Registration
           </h1>
@@ -402,7 +400,10 @@ const Form = () => {
               <p className="text-red-700 text-xs mt-1">{errors?.description}</p>
             )}
           </div>
-          <button onClick={handleSubmit} className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-16 py-2">
+          <button
+            onClick={handleSubmit}
+            className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-8 py-2 transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen shadow-2xl"
+          >
             Register
           </button>
         </form>
