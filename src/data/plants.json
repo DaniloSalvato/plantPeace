@@ -4,7 +4,10 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["indoor", "cactus"],
+      "label": [
+        "indoor",
+        "cactus"
+      ],
       "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -16,6 +19,91 @@
         "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."
       ],
       "description": "Ladyfinger cactus (Echinocereus pentalophus) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "2",
+      "name": "auysd ",
+      "subtitle": "adfasdfasdfsdf",
+      "price": 100,
+      "isInSale": true,
+      "discountPercentage": 20,
+      "label": [
+        "indoor",
+        "asdqwe"
+      ],
+      "features": [
+        "Species: Echinocereus spp."
+      ],
+      "description": "asdfasdfsdf",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "3",
+      "name": "asdasa",
+      "subtitle": "jkljhk",
+      "label": [
+        "indoor",
+        "hjkas"
+      ],
+      "price": 12,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "asdasd"
+      ],
+      "description": "asdasd",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "4",
+      "name": "teste",
+      "subtitle": "teste",
+      "label": [
+        "indoor",
+        "teste"
+      ],
+      "price": 1223,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "qweqweqwe"
+      ],
+      "description": "qweqweqwe",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "19",
+      "name": "asdasd",
+      "subtitle": "asdasd",
+      "label": [
+        "indoor",
+        "asdd"
+      ],
+      "price": 1222222,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "asdasd"
+      ],
+      "description": "asdasdasd",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "573294",
+      "name": "asdasdasdas",
+      "subtitle": "asdasdasd",
+      "label": [
+        "indoor",
+        "asdasdasd"
+      ],
+      "price": 1,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "asdasdasdasdasdasdasdasdasdasdasdasdasdasd"
+      ],
+      "description": "asddfgçfhnçlkflhjkçlfgkhlfkgçhlkfçglhklfkhçlkfglhk",
       "imgUrl": "/src/assets/img0-container-3.png"
     }
   ]

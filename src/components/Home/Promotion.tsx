@@ -1,36 +1,20 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SplideSlider from "./SplideSlider";
 import { IPlantProps } from "../../types/plant";
 
-
 const Promotion = () => {
-  // const [plant, setPlant] = useState<Promise<IPlantProps[]>>();
-
-  // const getPlants = useCallback(async (): Promise<void> => {
-  //   await fetch("http://localhost:3000/plants").then((res) => {
-  //     if (res) {
-  //       console.log(res.json());
-        
-  //       setPlant(res.json());
-  //     }
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   getPlants();
-  // }, [getPlants]);
-
-  const [plants, setPlants] = useState<IPlantProps[] | null>(null)
+  const [plants, setPlants] = useState<IPlantProps[] | null>(null);
   useEffect(() => {
     async function getPlants() {
-      const res = await fetch("http://localhost:3000/plants")
-      const json = await res.json()
-      console.log(json)
-      setPlants(json)
+      const res = await fetch("http://localhost:3000/plants");
+      const json = await res.json();
+      console.log(json);
+      setPlants(json);
     }
-    getPlants()
-  },[])
+    getPlants();
+  }, []);
 
+  const inSale = plants!.filter(plants => plants.isInSale);
 
   return (
     <section className="bg-customWisper">
@@ -42,7 +26,7 @@ const Promotion = () => {
       </h1>
 
       <div className="pt-20 pl-10 pb-20">
-        {plants && <SplideSlider plants={plants} />}
+        {plants && <SplideSlider plants={inSale} />}
       </div>
     </section>
   );

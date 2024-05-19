@@ -125,12 +125,12 @@ const Form = () => {
       if (
         !stringRegex.test(features.trim()) ||
         features.trim().length < 3 ||
-        features.trim().length > 30
+        features.trim().length > 500
       ) {
         setErrors((prev) => ({
           ...prev,
           features:
-            "Features is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Features is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -140,12 +140,12 @@ const Form = () => {
       if (
         !stringRegex.test(description.trim()) ||
         description.trim().length < 3 ||
-        description.trim().length > 30
+        description.trim().length > 500
       ) {
         setErrors((prev) => ({
           ...prev,
           description:
-            "Description is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Description is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -163,12 +163,14 @@ const Form = () => {
 
   const sendData = async () => {
     const req = {
+      id: (Math.floor(Math.random() * 1000000) + 1).toString(),
       name: plantForm.plantName,
       subtitle: plantForm.plantSubtitle,
-      price: plantForm.price,
-      discountPercentage: plantForm.discountPercentage,
       label: [plantForm.label, plantForm.plantType],
-      features: plantForm.features,
+      price: plantForm.price,
+      isInSale: plantForm.discountPercentage <= 0 ? false : true ,
+      discountPercentage: plantForm.discountPercentage,
+      features: [plantForm.features],
       description: plantForm.description,
       imgUrl: "/src/assets/img0-container-3.png"
     };
@@ -180,7 +182,6 @@ const Form = () => {
         },
         body: JSON.stringify(req),
       });
-      console.log("Dados enviados com sucesso!");
     } catch (error) {
       console.error("Erro ao enviar os dados:", error);
     } finally {
@@ -223,7 +224,7 @@ const Form = () => {
               }
             />
             {errors?.plantName && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantName}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.plantName}</p>
             )}
           </div>
 
@@ -245,7 +246,7 @@ const Form = () => {
               }
             />
             {errors?.plantSubtitle && (
-              <p className="text-red-700 text-sm mt-1">
+              <p className="text-red-700 text-xs mt-1">
                 {errors?.plantSubtitle}
               </p>
             )}
@@ -266,7 +267,7 @@ const Form = () => {
               }
             />
             {errors?.plantType && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantType}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.plantType}</p>
             )}
           </div>
 
@@ -289,7 +290,7 @@ const Form = () => {
                 }
               />
               {errors?.price && (
-                <p className="text-red-700 text-sm mt-1">{errors?.price}</p>
+                <p className="text-red-700 text-xs mt-1">{errors?.price}</p>
               )}
             </div>
 
@@ -311,7 +312,7 @@ const Form = () => {
                 }
               />
               {errors?.discountPercentage && (
-                <p className="text-red-700 text-sm mt-1">
+                <p className="text-red-700 text-xs mt-1">
                   {errors?.discountPercentage}
                 </p>
               )}
@@ -340,7 +341,7 @@ const Form = () => {
                 Indoor
               </label>
               {errors?.label && (
-                <p className="text-red-700 text-sm mt-1">{errors?.label}</p>
+                <p className="text-red-700 text-xs mt-1">{errors?.label}</p>
               )}
             </div>
 
@@ -377,7 +378,7 @@ const Form = () => {
               }
             ></textarea>
             {errors?.features && (
-              <p className="text-red-700 text-sm mt-1">{errors?.features}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.features}</p>
             )}
           </div>
 
@@ -398,7 +399,7 @@ const Form = () => {
               }
             ></textarea>
             {errors?.description && (
-              <p className="text-red-700 text-sm mt-1">{errors?.description}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.description}</p>
             )}
           </div>
           <button onClick={handleSubmit} className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-16 py-2">
