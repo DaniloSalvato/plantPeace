@@ -1,4 +1,4 @@
-# Plant Peace - Desafio 2 | Programas de Bolsas React
+# Plant Peace 🌻 - Desafio 2 🐱‍👤 | Programas de Bolsas React
 
 ## Descrição do projeto
 
@@ -47,6 +47,43 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
 - [JSON Server](https://github.com/typicode/json-server) para simular um banco de dados e realizar requisições (POST e GET)
 - [Splide](https://splidejs.com/) para criar o carrossel de produtos da página
 - [React Router](https://reactrouter.com/en/main) para criar rotas dentro da página e criar uma SPA (Single Page Application)
+
+## Como contribuir
+
+```bash
+    # Clone the project
+    $ git clone https://github.com/DaniloSalvato/desafio-2-semana-8.git
+```
+
+```bash
+    # Enter directory
+    $ cd desafio-2-semana-8
+```
+
+```bash
+    # Executar a instalação dos modulos
+    $ npm i
+```
+
+```bash
+    # Rodar o projeto
+
+    # Primeiro terminal
+    $ npm run dev
+```
+
+```bash
+    # É necessário a criação de 2 terminais adicionais para a execução dos jsonServer databases
+
+    # Segundo terminal
+    $ npx json-server --watch src/data/plants.json
+
+    # Terceiro terminal
+    $ npx json-server --watch src/data/devs.json -p 8080
+```
+
+
+
 
 ## Imagens do site
 
