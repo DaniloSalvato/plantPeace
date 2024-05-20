@@ -50,9 +50,23 @@ export default function ProductDetails() {
           ))}
         </div>
 
-        <p className="font-lato text-xl font-bold">
-          {formatPrice(plant.price)}
-        </p>
+        {plant.discountPercentage ? (
+          <div className="flex gap-2">
+            <p className="font-lato text-xl font-bold line-through text-customGray">
+              {formatPrice(plant.price)}
+            </p>
+            <p className="font-lato text-xl font-bold">
+              {formatPrice(
+                plant.price -
+                  (plant.price * Number(plant.discountPercentage)) / 100
+              )}
+            </p>
+          </div>
+        ) : (
+          <p className="font-lato text-xl font-bold">
+            {formatPrice(plant.price)}
+          </p>
+        )}
 
         <button className="text-customAthenaGrey font-raleway py-5 px-14 shadow-2xl bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen hover:scale-105">
           Check out
