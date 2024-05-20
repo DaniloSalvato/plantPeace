@@ -30,7 +30,7 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
 - Adicione um README ao seu projeto;
 - Faça pequenos commits e use Convencionais Commits para manter seu repositório organizado.
 
-## Integrantes
+## 🙋‍♂️ Integrantes
 
 - [Danilo Salvato](https://github.com/DaniloSalvato) (SM)
 - [Bruno Henrique Messias](https://github.com/m3ssJS)
@@ -38,7 +38,7 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
 - [Viviane Meneguin](https://github.com/vivianemeneguin)
 - [Letícia dos Santos](https://github.com/leeduarda)
 
-## Tecnologias utilizadas
+## 🔨 Tecnologias utilizadas
 
 - React
 - Typescript
@@ -48,7 +48,7 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
 - [Splide](https://splidejs.com/) para criar o carrossel de produtos da página
 - [React Router](https://reactrouter.com/en/main) para criar rotas dentro da página e criar uma SPA (Single Page Application)
 
-## Como contribuir
+## 🎉 Como contribuir
 
 ```bash
     # Clone the project
@@ -82,10 +82,7 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
     $ npx json-server --watch src/data/devs.json -p 8080
 ```
 
-
-
-
-## Imagens do site
+## ✨ Imagens do site
 
 ### Home
 
