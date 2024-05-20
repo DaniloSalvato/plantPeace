@@ -10,6 +10,7 @@ export default function Product({
   subtitle,
   label,
   price,
+  discountPercentage,
 }: IPlantProps) {
   return (
     <div className="flex flex-col gap-2 p-4 m-1 bg-customAthenaGrey rounded">
@@ -21,7 +22,18 @@ export default function Product({
 
       <p className="text-customGray font-lato font-semibold">{subtitle}</p>
 
-      <p className="font-lato font-bold text-lg">{formatPrice(price)}</p>
+      {discountPercentage ? (
+        <div className="flex gap-2">
+          <p className="text-customGray font-lato font-bold text-lg line-through">
+            {formatPrice(price)}
+          </p>
+          <p className="font-lato font-bold text-lg">
+            {formatPrice(price - (price * Number(discountPercentage)) / 100)}
+          </p>
+        </div>
+      ) : (
+        <p className="font-lato font-bold text-lg">{formatPrice(price)}</p>
+      )}
 
       <div className="mt-4 flex items-center justify-between cursor-default">
         <div className="font-raleway text-customAvocado *:bg-customWisper *:py-2 *:px-4 *:rounded-full *:ring-2 *:ring-customAvocado flex gap-2">
