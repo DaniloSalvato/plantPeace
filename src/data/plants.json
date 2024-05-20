@@ -4,10 +4,7 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "indoor",
-        "cactus"
-      ],
+      "label": ["indoor", "cactus"],
       "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -22,17 +19,25 @@
       "imgUrl": "/src/assets/img0-container-3.png"
     },
     {
-      "id": "dae8",
+      "id": "2",
       "name": "teste",
       "subtitle": "plantaTeste",
       "price": 100,
       "discountPercentage": 10,
-      "label": [
-        "indoor",
-        "teste"
-      ],
+      "label": ["indoor", "teste"],
       "features": "dfdfd",
       "description": "dfdfd",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "3",
+      "name": "asdasdasldaskdjh",
+      "subtitle": "asldfjkhasldkjfhasdlkfjh",
+      "price": 100,
+      "discountPercentage": 10,
+      "label": ["indoor", "jdfalsdkjflakjsf"],
+      "features": "asdasdasdasdas",
+      "description": "asdfasdfasdfsdf",
       "imgUrl": "/src/assets/img0-container-3.png"
     }
   ]
