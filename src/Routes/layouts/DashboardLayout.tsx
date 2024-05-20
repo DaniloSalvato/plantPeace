@@ -1,20 +1,20 @@
-import * as React from "react";
-import { useAuth } from "@clerk/clerk-react";
-import { Outlet, useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
+import * as React from "react"
+import { useAuth } from "@clerk/clerk-react"
+import { Outlet, useNavigate } from "react-router-dom"
+import Footer from "../../components/Footer"
+import Navbar from "../../components/Navbar"
 
 export default function DashboardLayout() {
-  const { userId, isLoaded } = useAuth();
-  const navigate = useNavigate();
+  const { userId, isLoaded } = useAuth()
+  const navigate = useNavigate()
 
   React.useEffect(() => {
     if (isLoaded && !userId) {
-      navigate("/");
+      navigate("/")
     }
-  }, [isLoaded]);
+  }, [isLoaded])
 
-  if (!isLoaded) return "Loading...";
+  if (!isLoaded) return "Loading..."
 
   return (
     <>
@@ -22,5 +22,5 @@ export default function DashboardLayout() {
       <Outlet />
       <Footer />
     </>
-  );
+  )
 }

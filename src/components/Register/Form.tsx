@@ -1,10 +1,10 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from "react"
 
-import imgRight from "../../assets/main-plant.png";
+import imgRight from "../../assets/main-plant.png"
 
-import { IFormErrors, IPlantFormState } from "../../types/plant";
-import Modal from "./Modal";
-import { NumericFormat } from "react-number-format";
+import { IFormErrors, IPlantFormState } from "../../types/plant"
+import Modal from "./Modal"
+import { NumericFormat } from "react-number-format"
 
 const Form = () => {
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
@@ -16,7 +16,7 @@ const Form = () => {
     label: "",
     features: "",
     description: "",
-  });
+  })
 
   const [errors, setErrors] = useState<IFormErrors>({
     plantName: null,
@@ -27,16 +27,16 @@ const Form = () => {
     label: null,
     features: null,
     description: null,
-  });
+  })
 
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false)
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
-      const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
-      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\(\)\:\,\.\'"\-]*$/;
+      const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/
+      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\(\)\:\,\.\'"\-]*$/
 
-      e.preventDefault();
+      e.preventDefault()
 
       const {
         plantName,
@@ -47,9 +47,9 @@ const Form = () => {
         label,
         features,
         description,
-      } = plantForm;
+      } = plantForm
 
-      let formIsValid = true;
+      let formIsValid = true
 
       if (
         !stringRegex.test(plantName.trim()) ||
@@ -60,10 +60,10 @@ const Form = () => {
           ...prev,
           plantName:
             "Plant name is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, plantName: null }));
+        setErrors((prev) => ({ ...prev, plantName: null }))
       }
 
       if (
@@ -75,10 +75,10 @@ const Form = () => {
           ...prev,
           plantSubtitle:
             "Plant Subtitle is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, plantSubtitle: null }));
+        setErrors((prev) => ({ ...prev, plantSubtitle: null }))
       }
 
       if (
@@ -90,20 +90,20 @@ const Form = () => {
           ...prev,
           plantType:
             "Plant type is required. It must contain between 3 and 50 characters and only allow letters, spaces, and accented characters.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, plantType: null }));
+        setErrors((prev) => ({ ...prev, plantType: null }))
       }
 
       if (isNaN(price) || price <= 0) {
         setErrors((prev) => ({
           ...prev,
           price: "Price must be a valid number greater than 0.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, price: null }));
+        setErrors((prev) => ({ ...prev, price: null }))
       }
 
       if (isNaN(discountPercentage) || discountPercentage < 0) {
@@ -111,20 +111,20 @@ const Form = () => {
           ...prev,
           discountPercentage:
             "Discount percentage must be a valid number equal to or greater than 0.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, discountPercentage: null }));
+        setErrors((prev) => ({ ...prev, discountPercentage: null }))
       }
 
       if (!label) {
         setErrors((prev) => ({
           ...prev,
           label: "Label is required.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, label: null }));
+        setErrors((prev) => ({ ...prev, label: null }))
       }
 
       if (
@@ -136,10 +136,10 @@ const Form = () => {
           ...prev,
           features:
             "Features is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, features: null }));
+        setErrors((prev) => ({ ...prev, features: null }))
       }
 
       if (
@@ -151,35 +151,35 @@ const Form = () => {
           ...prev,
           description:
             "Description is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
-        }));
-        formIsValid = false;
+        }))
+        formIsValid = false
       } else {
-        setErrors((prev) => ({ ...prev, description: null }));
+        setErrors((prev) => ({ ...prev, description: null }))
       }
 
-      if (!formIsValid) return;
+      if (!formIsValid) return
 
       if (formIsValid) {
-        sendData();
+        sendData()
 
-        setOpenModal(true);
+        setOpenModal(true)
 
         setTimeout(() => {
-          setOpenModal(false);
-        }, 5000);
+          setOpenModal(false)
+        }, 5000)
       }
     },
     [plantForm]
-  );
+  )
 
   const capitalize = (string: string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
+    return string.charAt(0).toUpperCase() + string.slice(1)
+  }
 
   function removeQuotesAndSplit(text: string) {
-    const cleanedText = text.replace(/"/g, "").replace(/\n/g, "");
+    const cleanedText = text.replace(/"/g, "").replace(/\n/g, "")
 
-    return cleanedText.split(", ");
+    return cleanedText.split(", ")
   }
 
   const sendData = async () => {
@@ -194,7 +194,7 @@ const Form = () => {
       features: removeQuotesAndSplit(plantForm.features),
       description: plantForm.description,
       imgUrl: "/src/assets/img-promo.jpg",
-    };
+    }
     try {
       await fetch("http://localhost:3000/plants", {
         method: "POST",
@@ -202,9 +202,9 @@ const Form = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(req),
-      });
+      })
     } catch (error) {
-      console.error("Erro ao enviar os dados");
+      console.error("Erro ao enviar os dados")
     } finally {
       setPlantForm({
         plantName: "",
@@ -215,12 +215,13 @@ const Form = () => {
         label: "",
         features: "",
         description: "",
-      });
+      })
     }
-  };
+  }
 
   return (
-    <>
+    <> 
+    
       <section className="w-full h-full flex-1 mb-20 lg:mt-10">
         <form className=" flex flex-col mx-12 pt-20 h-full md:w-2/3">
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">
@@ -357,7 +358,7 @@ const Form = () => {
                   setPlantForm((prev) => ({
                     ...prev,
                     label: e.target.value,
-                  }));
+                  }))
                 }}
               />
               <label htmlFor="indoor" className="px-1">
@@ -378,7 +379,7 @@ const Form = () => {
                   setPlantForm((prev) => ({
                     ...prev,
                     label: e.target.value,
-                  }));
+                  }))
                 }}
               />
               <label htmlFor="outdoor" className="px-1">
@@ -442,7 +443,7 @@ const Form = () => {
         />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

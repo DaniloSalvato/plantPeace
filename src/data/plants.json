@@ -4,7 +4,10 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["indoor", "cactus"],
+      "label": [
+        "indoor",
+        "cactus"
+      ],
       "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -22,7 +25,10 @@
       "id": "2",
       "name": "Golden Barrel Cactus",
       "subtitle": "A Striking Focal Point for Your Home",
-      "label": ["Indoor", "cactus"],
+      "label": [
+        "Indoor",
+        "cactus"
+      ],
       "price": 99.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -40,7 +46,10 @@
       "id": "3",
       "name": "Christmas Cactus",
       "subtitle": "A Festive and Easy-to-Care-For Plant",
-      "label": ["Indoor", "succulent"],
+      "label": [
+        "Indoor",
+        "succulent"
+      ],
       "price": 59.99,
       "isInSale": true,
       "discountPercentage": 15,
@@ -58,7 +67,10 @@
       "id": "4",
       "name": "Hedgehog Cactus",
       "subtitle": "A Spiky Yet Charming Plant for Your Collection",
-      "label": ["Outdoor", "cactus"],
+      "label": [
+        "Outdoor",
+        "cactus"
+      ],
       "price": 79.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -76,7 +88,10 @@
       "id": "5",
       "name": "Old Lady Cactus",
       "subtitle": "A Delightful and Hardy Cactus for Enthusiasts",
-      "label": ["Indoor", "cactus"],
+      "label": [
+        "Indoor",
+        "cactus"
+      ],
       "price": 69.99,
       "isInSale": true,
       "discountPercentage": 10,
@@ -94,7 +109,10 @@
       "id": "6",
       "name": "Blue Torch Cactus",
       "subtitle": "An Exotic and Eye-Catching Addition to Your Space",
-      "label": ["Indoor", "cactus"],
+      "label": [
+        "Indoor",
+        "cactus"
+      ],
       "price": 89.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -112,7 +130,10 @@
       "id": "7",
       "name": "Fairy Castle Cactus",
       "subtitle": "A Whimsical and Unique Cactus for Your Collection",
-      "label": ["Indoor", "cactus"],
+      "label": [
+        "Indoor",
+        "cactus"
+      ],
       "price": 49.99,
       "isInSale": true,
       "discountPercentage": 25,
@@ -130,7 +151,10 @@
       "id": "8",
       "name": "Moon Cactus",
       "subtitle": "A Vibrant and Colorful Addition to Your Home",
-      "label": ["Outdoor", "succulent"],
+      "label": [
+        "Outdoor",
+        "succulent"
+      ],
       "price": 39.99,
       "isInSale": true,
       "discountPercentage": 10,
@@ -148,7 +172,10 @@
       "id": "9",
       "name": "Peace Lily",
       "subtitle": "A Graceful and Air-Purifying Plant",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 29.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -166,7 +193,10 @@
       "id": "10",
       "name": "Orchid",
       "subtitle": "An Exotic and Elegant Flower for Any Space",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 49.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -184,7 +214,10 @@
       "id": "11",
       "name": "African Violet",
       "subtitle": "A Classic and Charming Flower for Your Home",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 19.99,
       "isInSale": true,
       "discountPercentage": 10,
@@ -202,7 +235,10 @@
       "id": "12",
       "name": "Bromeliad",
       "subtitle": "A Tropical Touch for Your Indoor Garden",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 29.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -220,7 +256,10 @@
       "id": "13",
       "name": "Kalanchoe",
       "subtitle": "A Vibrant and Low-Maintenance Flower",
-      "label": ["Indoor", "succulent"],
+      "label": [
+        "Indoor",
+        "succulent"
+      ],
       "price": 24.99,
       "isInSale": true,
       "discountPercentage": 15,
@@ -238,7 +277,10 @@
       "id": "14",
       "name": "Jasmine",
       "subtitle": "A Fragrant and Elegant Flowering Plant",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 34.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -256,7 +298,10 @@
       "id": "15",
       "name": "Begonia",
       "subtitle": "A Colorful and Versatile Flowering Plant",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 22.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -274,7 +319,10 @@
       "id": "16",
       "name": "Anthurium",
       "subtitle": "A Bold and Long-Lasting Flower",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 39.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -292,7 +340,10 @@
       "id": "17",
       "name": "Azalea",
       "subtitle": "A Stunning and Showy Flowering Shrub",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 29.99,
       "isInSale": true,
       "discountPercentage": 10,
@@ -310,7 +361,10 @@
       "id": "18",
       "name": "Geranium",
       "subtitle": "A Bright and Cheerful Flowering Plant",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 19.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -328,7 +382,10 @@
       "id": "19",
       "name": "Petunia",
       "subtitle": "A Versatile and Colorful Flowering Plant",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 15.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -346,7 +403,10 @@
       "id": "20",
       "name": "Pansy",
       "subtitle": "A Hardy and Colorful Flower for Any Season",
-      "label": ["Indoor", "flower"],
+      "label": [
+        "Indoor",
+        "flower"
+      ],
       "price": 12.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -364,7 +424,10 @@
       "id": "71455",
       "name": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
-      "label": ["Indoor", "Succulent"],
+      "label": [
+        "Indoor",
+        "Succulent"
+      ],
       "price": 24.99,
       "isInSale": true,
       "discountPercentage": 15,
@@ -382,7 +445,10 @@
       "id": "256485",
       "name": "Spider Plant",
       "subtitle": "An Air Purifying Plant with Graceful Foliage",
-      "label": ["Indoor", "Plant"],
+      "label": [
+        "Indoor",
+        "Plant"
+      ],
       "price": 19.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -400,7 +466,10 @@
       "id": "38274",
       "name": "Philodendron",
       "subtitle": "A Versatile and Easy to Grow Plant",
-      "label": ["Indoor", "Plant"],
+      "label": [
+        "Indoor",
+        "Plant"
+      ],
       "price": 17.99,
       "isInSale": false,
       "discountPercentage": 0,
@@ -418,7 +487,10 @@
       "id": "701275",
       "name": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
-      "label": ["Indoor", "Succulent"],
+      "label": [
+        "Indoor",
+        "Succulent"
+      ],
       "price": 24.99,
       "isInSale": true,
       "discountPercentage": 15,
@@ -436,7 +508,10 @@
       "id": "292038",
       "name": "Rubber Plant",
       "subtitle": "A Classic and Elegant Foliage Plant",
-      "label": ["Outdoor", "Plant"],
+      "label": [
+        "Outdoor",
+        "Plant"
+      ],
       "price": 29.99,
       "isInSale": true,
       "discountPercentage": 10,
@@ -454,7 +529,10 @@
       "id": "340772",
       "name": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
-      "label": ["Indoor", "Succulent"],
+      "label": [
+        "Indoor",
+        "Succulent"
+      ],
       "price": 24.99,
       "isInSale": true,
       "discountPercentage": 15,
@@ -472,7 +550,10 @@
       "id": "949472",
       "name": "Cactu",
       "subtitle": "Cactu",
-      "label": ["Indoor", "Deserto"],
+      "label": [
+        "Indoor",
+        "Deserto"
+      ],
       "price": 20,
       "isInSale": false,
       "discountPercentage": 0,
@@ -490,7 +571,10 @@
       "id": "65248",
       "name": "Cactu teste",
       "subtitle": "Teste promo",
-      "label": ["Indoor", "Promo"],
+      "label": [
+        "Indoor",
+        "Promo"
+      ],
       "price": 50,
       "isInSale": true,
       "discountPercentage": 10,
@@ -502,6 +586,27 @@
         "     Shipping: Carefully packaged for safe delivery."
       ],
       "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "339540",
+      "name": "ZZ Plant",
+      "subtitle": "A Hardy and Stylish Addition to Any Space",
+      "label": [
+        "Outdoor",
+        "Succulent"
+      ],
+      "price": 27.99,
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": [
+        "Species: Zamioculcas zamiifolia",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The ZZ Plant is known for its glossy, dark green leaves and low maintenance care requirements. It thrives in low light conditions and infrequent watering.",
       "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]

@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import SplideSlider from "./SplideSlider";
-import { IPlantProps } from "../../types/plant";
+import { useEffect, useState } from "react"
+import SplideSlider from "./SplideSlider"
+import { IPlantProps } from "../../types/plant"
 
 const Promotion = () => {
-  const [plants, setPlants] = useState<IPlantProps[] | null>(null);
+  const [plants, setPlants] = useState<IPlantProps[] | null>(null)
   useEffect(() => {
     async function getPlants() {
-      const res = await fetch("http://localhost:3000/plants");
-      const json = await res.json();
-      console.log(json);
-      setPlants(json);
+      const res = await fetch("http://localhost:3000/plants")
+      const json = await res.json()
+      console.log(json)
+      setPlants(json)
     }
-    getPlants();
-  }, []);
+    getPlants()
+  }, [])
 
   return (
     <section className="bg-customWisper">
@@ -29,7 +29,7 @@ const Promotion = () => {
         )}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Promotion;
+export default Promotion

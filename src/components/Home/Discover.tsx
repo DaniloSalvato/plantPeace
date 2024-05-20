@@ -1,6 +1,6 @@
-import { FiArrowRight } from "react-icons/fi";
-import { FaMinus } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi"
+import { FaMinus } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 import secondPlant from "../../assets/secondary-plant.png"
 
@@ -32,12 +32,8 @@ const Discover = () => {
         </Link>
 
         <div className="hidden lg:block lg:absolute lg:-bottom-6 lg:-left-20 grayscale">
-             <img
-               className="lg:w-1/2 xl:w-2/3"
-               src={secondPlant}
-               alt=""
-             />
-           </div>
+          <img className="lg:w-1/2 xl:w-2/3" src={secondPlant} alt="" />
+        </div>
 
         <Link to={"*"}>
           <div className="flex my-4 md:pt-40 lg:absolute lg:bottom-0 lg:left-0 hover:text-customLunarGreen font-raleway text-customSecondary text-sm items-center">
@@ -47,7 +43,6 @@ const Discover = () => {
         </Link>
       </div>
 
-
       <div className="hidden sm:object-cover sm:flex-1 sm:block w-1/2 justify-center items-end">
         <img
           className="h-full w-full object-cover grayscale"
@@ -56,7 +51,7 @@ const Discover = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Discover;
+export default Discover
