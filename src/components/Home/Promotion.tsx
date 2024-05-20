@@ -16,8 +16,8 @@ const Promotion = () => {
 
   return (
     <section className="bg-customWisper">
-      <h1 className="flex justify-center font-garamondSerif font-bold text-4xl xl:text-6xl text-customLunarGreen">
-        Plants In{" "}
+      <h1 className="inline-block w-full text-center font-garamondSerif font-bold text-4xl lg:text-6xl text-customLunarGreen">
+        Plants In
         <span className="font-garamondSerif font-bold text-customAvocado pl-3">
           Sale
         </span>

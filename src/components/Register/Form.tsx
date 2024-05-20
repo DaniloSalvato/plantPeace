@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import imgRight from "../../assets/main-plant.png";
 
 import { IFormErrors, IPlantFormState } from "../../types/plant";
+import Modal from "./Modal";
 
 const Form = () => {
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
@@ -27,9 +28,12 @@ const Form = () => {
     description: null,
   });
 
+  const [openModal, setOpenModal] = useState(false);
+
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\(\)\:\,\.\'"\-]*$/;
 
       e.preventDefault();
 
@@ -49,7 +53,7 @@ const Form = () => {
       if (
         !stringRegex.test(plantName.trim()) ||
         plantName.trim().length < 3 ||
-        plantName.trim().length > 30
+        plantName.trim().length > 70
       ) {
         setErrors((prev) => ({
           ...prev,
@@ -64,7 +68,7 @@ const Form = () => {
       if (
         !stringRegex.test(plantSubtitle.trim()) ||
         plantSubtitle.trim().length < 3 ||
-        plantSubtitle.trim().length > 30
+        plantSubtitle.trim().length > 70
       ) {
         setErrors((prev) => ({
           ...prev,
@@ -77,14 +81,14 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(plantType.trim()) ||
+        !textRegex.test(plantType.trim()) ||
         plantType.trim().length <= 3 ||
-        plantType.trim().length > 30
+        plantType.trim().length > 50
       ) {
         setErrors((prev) => ({
           ...prev,
           plantType:
-            "Plant type is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Plant type is required. It must contain between 3 and 50 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -115,7 +119,7 @@ const Form = () => {
       if (!label) {
         setErrors((prev) => ({
           ...prev,
-          label: "Discount percentage is required.",
+          label: "Label is required.",
         }));
         formIsValid = false;
       } else {
@@ -123,7 +127,7 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(features.trim()) ||
+        !textRegex.test(features.trim()) ||
         features.trim().length < 3 ||
         features.trim().length > 500
       ) {
@@ -138,7 +142,7 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(description.trim()) ||
+        !textRegex.test(description.trim()) ||
         description.trim().length < 3 ||
         description.trim().length > 500
       ) {
@@ -156,23 +160,39 @@ const Form = () => {
 
       if (formIsValid) {
         sendData();
+
+        setOpenModal(true);
+
+        setTimeout(() => {
+          setOpenModal(false);
+        }, 5000);
       }
     },
     [plantForm]
   );
 
+  const capitalize = (string: string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  function removeQuotesAndSplit(text: string) {
+    const cleanedText = text.replace(/"/g, "").replace(/\n/g, "");
+
+    return cleanedText.split(", ");
+  }
+
   const sendData = async () => {
     const req = {
       id: (Math.floor(Math.random() * 1000000) + 1).toString(),
-      name: plantForm.plantName,
-      subtitle: plantForm.plantSubtitle,
-      label: [plantForm.label, plantForm.plantType],
+      name: capitalize(plantForm.plantName),
+      subtitle: capitalize(plantForm.plantSubtitle),
+      label: [plantForm.label, capitalize(plantForm.plantType)],
       price: plantForm.price,
       isInSale: plantForm.discountPercentage <= 0 ? false : true,
       discountPercentage: plantForm.discountPercentage,
-      features: [plantForm.features],
+      features: removeQuotesAndSplit(plantForm.features),
       description: plantForm.description,
-      imgUrl: "/src/assets/img0-container-3.png",
+      imgUrl: "/src/assets/img-promo.jpg",
     };
     try {
       await fetch("http://localhost:3000/plants", {
@@ -183,7 +203,7 @@ const Form = () => {
         body: JSON.stringify(req),
       });
     } catch (error) {
-      console.error("Erro ao enviar os dados:", error);
+      console.error("Erro ao enviar os dados");
     } finally {
       setPlantForm({
         plantName: "",
@@ -200,8 +220,8 @@ const Form = () => {
 
   return (
     <>
-      <section className="w-full flex-1 mb-4">
-        <form className=" flex flex-col mx-12 pt-20 md:w-2/3">
+      <section className="w-full h-full flex-1 mb-20 lg:mt-10">
+        <form className=" flex flex-col mx-12 pt-20 h-full md:w-2/3">
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">
             Plant Registration
           </h1>
@@ -327,7 +347,7 @@ const Form = () => {
                 type="radio"
                 id="indoor"
                 name="label"
-                value="indoor"
+                value="Indoor"
                 onChange={(e) => {
                   setPlantForm((prev) => ({
                     ...prev,
@@ -348,7 +368,7 @@ const Form = () => {
                 type="radio"
                 id="outdoor"
                 name="label"
-                value="outdoor"
+                value="Outdoor"
                 onChange={(e) => {
                   setPlantForm((prev) => ({
                     ...prev,
@@ -407,12 +427,13 @@ const Form = () => {
             Register
           </button>
         </form>
+        <Modal isVisible={openModal} />
       </section>
       <section className="flex-1 hidden sm:block sm:w-full bg-customWisper">
         <img
           src={imgRight}
           alt=""
-          className="hidden sm:block lg:w-full h-full object-cover filter grayscale"
+          className="hidden sm:block w-full h-full object-cover grayscale"
         />
       </section>
     </>

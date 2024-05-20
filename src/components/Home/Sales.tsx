@@ -17,13 +17,17 @@ const Sales = () => {
 
   return (
     <section className="bg-customWisper">
-      <h1 className="flex justify-center font-garamondSerif font-bold text-4xl xl:text-6xl">
-        <span className="text-customLunarGreen">This Weeks Most Popular</span>
-        &nbsp;<span className="text-customAvocado">And Best Selling</span>
+      <h1 className="inline-block w-full text-center mt-10 mb-12 text-4xl lg:mb-20 lg:text-6xl font-garamondSerif font-bold text-customLunarGreen">
+        This Weeks Most Popular
+        <span className=" ml-1 text-customAvocado ">
+          And Best Selling
+        </span>
       </h1>
 
       <div className="pt-20 pl-10 pb-20">
-        {plants && <SplideSlider plants={plants.filter((plants) => !plants.isInSale)} />}
+        {plants && (
+          <SplideSlider plants={plants.filter((plants) => !plants.isInSale)} />
+        )}
       </div>
     </section>
   );
