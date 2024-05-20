@@ -25,9 +25,15 @@ export default {
         customGreen: "#83E281",
         customLightGreen: "#F6FFF6",
       },
+      spacing: {
+        plantCard: '560.18px',
+      },
       backgroundImage: {
         footerBg: "url('/src/assets/footer-background.svg')",
       },
+      fontSize: {
+        error: 'px',
+      }
     },
   },
   plugins: [],

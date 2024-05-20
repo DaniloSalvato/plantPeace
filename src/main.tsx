@@ -1,6 +1,5 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import App from "./App.tsx"
 import "./index.css"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
@@ -9,33 +8,50 @@ import Home from "./Routes/Home.tsx"
 import Register from "./Routes/Register.tsx"
 import Products from "./Routes/Products.tsx"
 import AboutUs from "./Routes/AboutUs.tsx"
-import Product from "./Routes/Product.tsx"
+import ProductDetailsPage from "./Routes/ProductDetailsPage.tsx"
+import Login from "./Routes/Login.tsx"
+
+import RootLayout from "./Routes/layouts/RootLayout.tsx"
+import DashboardLayout from "./Routes/layouts/DashboardLayout.tsx"
+
+import ErrorPage from "./components/ErrorPage.tsx"
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    element: <RootLayout />,
     children: [
+      { path: "/", element: <Login /> },
       {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/register",
-        element: <Register />,
-      },
-      {
-        path: "/products",
-        element: <Products />,
-      },
-      {
-        path: "/about-us",
-        element: <AboutUs />,
-      },
-
-      {
-        path: "/product/1",
-        element: <Product />,
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "/home",
+            element: <Home />,
+          },
+          {
+            path: "/register",
+            element: <Register />,
+          },
+          {
+            path: "/products",
+            element: <Products />,
+          },
+          {
+            path: "/about-us",
+            element: <AboutUs />,
+          },
+          {
+            path: "/product/:id",
+            element: <ProductDetailsPage />,
+          },
+          { path: "*", element: <ErrorPage /> },
+        ],
       },
     ],
   },
