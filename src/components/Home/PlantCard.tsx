@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 type PlantProps = {
-  id: number;
-  title: string;
-  price: number;
-  promo: number;
-  isInSale: boolean;
-  category: string[];
-  imageUrl: string;
-};
+  id: number
+  title: string
+  price: number
+  promo: number
+  isInSale: boolean
+  category: string[]
+  imageUrl: string
+}
 
 const PlantCard = ({
   id,
@@ -42,8 +42,8 @@ const PlantCard = ({
                 </>
               ) : (
                 <p className="font-raleway text-customLunarGreen">
-                    ${price.toFixed(2)}
-                  </p>
+                  ${price.toFixed(2)}
+                </p>
               )}
             </div>
 
@@ -56,7 +56,7 @@ const PlantCard = ({
         </div>
       </Link>
     </>
-  );
-};
+  )
+}
 
-export default PlantCard;
+export default PlantCard

@@ -1,4 +1,4 @@
-import Form from "../components/Register/Form";
+import Form from "../components/Register/Form"
 
 const Register = () => {
   return (
@@ -7,7 +7,7 @@ const Register = () => {
         <Form />
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

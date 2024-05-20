@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { IPlantProps } from "../../types/plant"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { formatPrice } from "../../ts/formatPrice"
 
 export default function ProductDetails() {
@@ -29,7 +29,7 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="flex flex-wrap flex-col lg:my-20 lg:mx-28 lg:flex-row justify-center items-center gap-8">    
+    <div className="flex flex-wrap flex-col lg:my-20 lg:mx-28 lg:flex-row justify-center items-center gap-8">
       <img
         className="flex h-screen w-full object-cover flex-1 p-4 lg:p-0"
         src={plant.imgUrl}
@@ -41,7 +41,9 @@ export default function ProductDetails() {
           <h1 className="font-garamondSerif text-4xl sm:text-5xl text-customLunarGreen mb-2">
             {plant.name}
           </h1>
-          <p className="text-customGray text-xl font-lato mb-4">{plant.subtitle}</p>
+          <p className="text-customGray text-xl font-lato mb-4">
+            {plant.subtitle}
+          </p>
         </div>
 
         <div className="font-raleway text-customDarkGreen *:bg-customLightGreen *:py-2 *:px-3 *:rounded-full *:border-2 *:border-customGreen flex gap-2 mb-4">
@@ -67,11 +69,11 @@ export default function ProductDetails() {
             {formatPrice(plant.price)}
           </p>
         )}
-
-        <button className="text-customAthenaGrey font-raleway py-4 px-14 mb-3 shadow-2xl bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen hover:scale-105">
-          Check out
-        </button>
-
+        <Link to="*">
+          <button className="text-customAthenaGrey font-raleway py-4 px-14 mb-3 shadow-2xl bg-customLunarGreen transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen hover:scale-105">
+            Check out
+          </button>
+        </Link>
         <section className="*:p-2">
           <h2 className="font-lato text-xl font-bold">Features</h2>
 
