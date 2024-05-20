@@ -220,7 +220,8 @@ const Form = () => {
   }
 
   return (
-    <>
+    <> 
+    
       <section className="w-full h-full flex-1 mb-20 lg:mt-10">
         <form className=" flex flex-col mx-12 pt-20 h-full md:w-2/3">
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">

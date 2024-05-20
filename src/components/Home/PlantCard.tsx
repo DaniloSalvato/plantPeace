@@ -47,7 +47,7 @@ const PlantCard = ({
               )}
             </div>
 
-            <div className="mt-8 ">
+            <div className='mt-8'>
               <span className="py-2 px-3 text-customAvocado border border-customAvocado rounded-full">
                 {category[0]}
               </span>
