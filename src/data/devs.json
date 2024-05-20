@@ -1,0 +1,37 @@
+[
+  {
+    "image": "../../src/assets/perfil/danilo.jpg",
+    "name": "Danilo Salvato",
+    "description": "Desenvolvedor Full Stack | JavaScript | TypeScript | React | Node.js | MongoDB | SQL Server.",
+    "github": "https://github.com/DaniloSalvato",
+    "linkedin": "https://www.linkedin.com/in/danilo-salvato/"
+  },
+  {
+    "image": "../../src/assets/perfil/sara.jpg",
+    "name": "Sarah Oliveira",
+    "description": "Estagiária na Compass UOL - Sistemas para Internet 5/6 - HTML | CSS | Sass | JavaScript | React",
+    "github": "https://github.com/soliveirarm",
+    "linkedin": "https://www.linkedin.com/in/soliveirarm/"
+  },
+  {
+    "image": "../../src/assets/perfil/viviane.jpg",
+    "name": "Viviane Bagliotti",
+    "description": "Estudante de Análise e Desenvolvimento de Sistemas | Estágio atual na Compass UOL.",
+    "github": "https://github.com/vivianemeneguin",
+    "linkedin": "https://www.linkedin.com/in/vivianemeneguin"
+  },
+  {
+    "image": "../../src/assets/perfil/bruno.jpg",
+    "name": "Bruno Messias",
+    "description": "Grande admirador da tecnologia, apaixonado por aprender não somente sobre a área mas também sobre pessoas, sobre a vida...",
+    "github": "https://github.com/m3ssJS",
+    "linkedin": "https://www.linkedin.com/in/bruno-henriq-messias"
+  },
+  {
+    "image": "../../src/assets/perfil/leticia.jpg",
+    "name": "Leticia dos Santos",
+    "description": "Cursando Sistemas para Internet - 5° Semestre | Estagiando na Compass UOL.",
+    "github": "https://github.com/leeduarda",
+    "linkedin": "https://www.linkedin.com/in/let%C3%ADcia-eduarda-3492b4251/"
+  }
+]
