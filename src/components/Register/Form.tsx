@@ -3,6 +3,8 @@ import { useCallback, useState } from "react";
 import imgRight from "../../assets/main-plant.png";
 
 import { IFormErrors, IPlantFormState } from "../../types/plant";
+import Modal from "./Modal";
+import { NumericFormat } from "react-number-format";
 
 const Form = () => {
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
@@ -27,9 +29,12 @@ const Form = () => {
     description: null,
   });
 
+  const [openModal, setOpenModal] = useState(false);
+
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\(\)\:\,\.\'"\-]*$/;
 
       e.preventDefault();
 
@@ -49,7 +54,7 @@ const Form = () => {
       if (
         !stringRegex.test(plantName.trim()) ||
         plantName.trim().length < 3 ||
-        plantName.trim().length > 30
+        plantName.trim().length > 70
       ) {
         setErrors((prev) => ({
           ...prev,
@@ -64,7 +69,7 @@ const Form = () => {
       if (
         !stringRegex.test(plantSubtitle.trim()) ||
         plantSubtitle.trim().length < 3 ||
-        plantSubtitle.trim().length > 30
+        plantSubtitle.trim().length > 70
       ) {
         setErrors((prev) => ({
           ...prev,
@@ -77,14 +82,14 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(plantType.trim()) ||
+        !textRegex.test(plantType.trim()) ||
         plantType.trim().length <= 3 ||
-        plantType.trim().length > 30
+        plantType.trim().length > 50
       ) {
         setErrors((prev) => ({
           ...prev,
           plantType:
-            "Plant type is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Plant type is required. It must contain between 3 and 50 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -115,7 +120,7 @@ const Form = () => {
       if (!label) {
         setErrors((prev) => ({
           ...prev,
-          label: "Discount percentage is required.",
+          label: "Label is required.",
         }));
         formIsValid = false;
       } else {
@@ -123,14 +128,14 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(features.trim()) ||
+        !textRegex.test(features.trim()) ||
         features.trim().length < 3 ||
-        features.trim().length > 30
+        features.trim().length > 500
       ) {
         setErrors((prev) => ({
           ...prev,
           features:
-            "Features is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Features is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -138,14 +143,14 @@ const Form = () => {
       }
 
       if (
-        !stringRegex.test(description.trim()) ||
+        !textRegex.test(description.trim()) ||
         description.trim().length < 3 ||
-        description.trim().length > 30
+        description.trim().length > 500
       ) {
         setErrors((prev) => ({
           ...prev,
           description:
-            "Description is required. It must contain between 3 and 30 characters and only allow letters, spaces, and accented characters.",
+            "Description is required. It must contain between 3 and 500 characters and only allow letters, spaces, and accented characters.",
         }));
         formIsValid = false;
       } else {
@@ -155,22 +160,40 @@ const Form = () => {
       if (!formIsValid) return;
 
       if (formIsValid) {
-        sendData()
+        sendData();
+
+        setOpenModal(true);
+
+        setTimeout(() => {
+          setOpenModal(false);
+        }, 5000);
       }
-    },[plantForm],
+    },
+    [plantForm]
   );
 
+  const capitalize = (string: string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  function removeQuotesAndSplit(text: string) {
+    const cleanedText = text.replace(/"/g, "").replace(/\n/g, "");
+
+    return cleanedText.split(", ");
+  }
 
   const sendData = async () => {
     const req = {
-      name: plantForm.plantName,
-      subtitle: plantForm.plantSubtitle,
+      id: (Math.floor(Math.random() * 1000000) + 1).toString(),
+      name: capitalize(plantForm.plantName),
+      subtitle: capitalize(plantForm.plantSubtitle),
+      label: [plantForm.label, capitalize(plantForm.plantType)],
       price: plantForm.price,
+      isInSale: plantForm.discountPercentage <= 0 ? false : true,
       discountPercentage: plantForm.discountPercentage,
-      label: [plantForm.label, plantForm.plantType],
-      features: plantForm.features,
+      features: removeQuotesAndSplit(plantForm.features),
       description: plantForm.description,
-      imgUrl: "/src/assets/img0-container-3.png"
+      imgUrl: "/src/assets/img-promo.jpg",
     };
     try {
       await fetch("http://localhost:3000/plants", {
@@ -180,9 +203,8 @@ const Form = () => {
         },
         body: JSON.stringify(req),
       });
-      console.log("Dados enviados com sucesso!");
     } catch (error) {
-      console.error("Erro ao enviar os dados:", error);
+      console.error("Erro ao enviar os dados");
     } finally {
       setPlantForm({
         plantName: "",
@@ -199,10 +221,8 @@ const Form = () => {
 
   return (
     <>
-      <section className="w-full flex-1 mb-4">
-        <form
-          className=" flex flex-col mx-12 pt-20 md:w-2/3"
-        >
+      <section className="w-full h-full flex-1 mb-20 lg:mt-10">
+        <form className=" flex flex-col mx-12 pt-20 h-full md:w-2/3">
           <h1 className="font-inter text-customLunarGreen font-semibold text-lg border-b border-customGray">
             Plant Registration
           </h1>
@@ -223,7 +243,7 @@ const Form = () => {
               }
             />
             {errors?.plantName && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantName}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.plantName}</p>
             )}
           </div>
 
@@ -245,7 +265,7 @@ const Form = () => {
               }
             />
             {errors?.plantSubtitle && (
-              <p className="text-red-700 text-sm mt-1">
+              <p className="text-red-700 text-xs mt-1">
                 {errors?.plantSubtitle}
               </p>
             )}
@@ -266,7 +286,7 @@ const Form = () => {
               }
             />
             {errors?.plantType && (
-              <p className="text-red-700 text-sm mt-1">{errors?.plantType}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.plantType}</p>
             )}
           </div>
 
@@ -275,7 +295,8 @@ const Form = () => {
               <label className="text-customIBBNB font-medium text-sm">
                 Price
               </label>
-              <input
+              <NumericFormat
+                prefix="$"
                 type="text"
                 name="price"
                 value={plantForm.price}
@@ -284,12 +305,14 @@ const Form = () => {
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
-                    price: parseFloat(e.target.value) || 0,
+                    price:
+                      +e.target.value.replace(/\$/g, "").replace(/,/g, ".") ||
+                      0,
                   }))
                 }
               />
               {errors?.price && (
-                <p className="text-red-700 text-sm mt-1">{errors?.price}</p>
+                <p className="text-red-700 text-xs mt-1">{errors?.price}</p>
               )}
             </div>
 
@@ -297,7 +320,8 @@ const Form = () => {
               <label className="text-customIBBNB font-medium text-sm">
                 Discount percentage
               </label>
-              <input
+              <NumericFormat
+                suffix="%"
                 type="text"
                 name="discountPercentage"
                 value={plantForm.discountPercentage}
@@ -306,12 +330,12 @@ const Form = () => {
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
-                    discountPercentage: parseFloat(e.target.value) || 0,
+                    discountPercentage: +e.target.value.replace(/%/g, "") || 0,
                   }))
                 }
               />
               {errors?.discountPercentage && (
-                <p className="text-red-700 text-sm mt-1">
+                <p className="text-red-700 text-xs mt-1">
                   {errors?.discountPercentage}
                 </p>
               )}
@@ -328,7 +352,7 @@ const Form = () => {
                 type="radio"
                 id="indoor"
                 name="label"
-                value="indoor"
+                value="Indoor"
                 onChange={(e) => {
                   setPlantForm((prev) => ({
                     ...prev,
@@ -340,7 +364,7 @@ const Form = () => {
                 Indoor
               </label>
               {errors?.label && (
-                <p className="text-red-700 text-sm mt-1">{errors?.label}</p>
+                <p className="text-red-700 text-xs mt-1">{errors?.label}</p>
               )}
             </div>
 
@@ -349,7 +373,7 @@ const Form = () => {
                 type="radio"
                 id="outdoor"
                 name="label"
-                value="outdoor"
+                value="Outdoor"
                 onChange={(e) => {
                   setPlantForm((prev) => ({
                     ...prev,
@@ -377,7 +401,7 @@ const Form = () => {
               }
             ></textarea>
             {errors?.features && (
-              <p className="text-red-700 text-sm mt-1">{errors?.features}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.features}</p>
             )}
           </div>
 
@@ -398,19 +422,23 @@ const Form = () => {
               }
             ></textarea>
             {errors?.description && (
-              <p className="text-red-700 text-sm mt-1">{errors?.description}</p>
+              <p className="text-red-700 text-xs mt-1">{errors?.description}</p>
             )}
           </div>
-          <button onClick={handleSubmit} className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-16 py-2">
+          <button
+            onClick={handleSubmit}
+            className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-8 py-2 transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen shadow-2xl"
+          >
             Register
           </button>
         </form>
+        <Modal isVisible={openModal} />
       </section>
       <section className="flex-1 hidden sm:block sm:w-full bg-customWisper">
         <img
           src={imgRight}
           alt=""
-          className="hidden sm:block lg:w-full h-full object-cover filter grayscale"
+          className="hidden sm:block w-full h-full object-cover grayscale"
         />
       </section>
     </>

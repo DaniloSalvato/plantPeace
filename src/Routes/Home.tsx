@@ -5,7 +5,7 @@ import Sales from "../components/Home/Sales";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-customWhite">
       <Discover />
       <PlantCare />
       <Sales />

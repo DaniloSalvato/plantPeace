@@ -57,3 +57,15 @@ Há ainda uma página que mostra um produto específico ao clicar no produto, os
 ### Register
 
 ![Register](github/register.png)
+
+### Products
+
+![Products](github/products.png)
+
+### Product
+
+![Product](github/product-detail.png)
+
+### About us
+
+![About us](github/about-us.png)

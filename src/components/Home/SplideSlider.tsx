@@ -8,6 +8,7 @@ type Data = {
 }
 
 const SplideSlider = ( {plants} : Data) => {
+
   return (
     <Splide
       options={{
@@ -20,16 +21,18 @@ const SplideSlider = ( {plants} : Data) => {
         rewind: false,
         autoWidth: true,
         autoHeight: true,
-        gap: "4rem"
+        gap: "2rem"
       }}
       aria-label="My favorite Images"
     >
       {plants.map((plant: IPlantProps) => (
         <SplideSlide key={plant.name}>
           <PlantCard
+            id={plant.id}
             title={plant.name}
             price={+plant.price}
             promo={+plant.discountPercentage}
+            isInSale={plant.isInSale}
             category={plant.label}
             imageUrl={plant.imgUrl}
           />
