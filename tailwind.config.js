@@ -31,6 +31,9 @@ export default {
       backgroundImage: {
         footerBg: "url('/src/assets/footer-background.svg')",
       },
+      fontSize: {
+        error: 'px',
+      }
     },
   },
   plugins: [],

@@ -4,10 +4,7 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "indoor",
-        "cactus"
-      ],
+      "label": ["Indoor", "cactus"],
       "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
@@ -19,21 +16,493 @@
         "Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition."
       ],
       "description": "Ladyfinger cactus (Echinocereus pentalophus) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
+      "imgUrl": "/src/assets/img2-container3.png"
+    },
+    {
+      "id": "2",
+      "name": "Golden Barrel Cactus",
+      "subtitle": "A Striking Focal Point for Your Home",
+      "label": ["Indoor", "cactus"],
+      "price": 99.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Echinocactus grusonii",
+        "Mature Size: Up to 3 feet (90 cm) in height and diameter.",
+        "Blooming Season: Late spring to early summer.",
+        "Pot Size: Available in 6-inch, 8-inch, and 10-inch pots.",
+        "Shipping: Carefully packaged and shipped to ensure safe arrival."
+      ],
+      "description": "The Golden Barrel Cactus is a stunning addition to any collection. It thrives in bright sunlight and requires minimal water. Beware of overwatering to avoid root rot.",
+      "imgUrl": "/src/assets/img1-container-3.png"
+    },
+    {
+      "id": "3",
+      "name": "Christmas Cactus",
+      "subtitle": "A Festive and Easy-to-Care-For Plant",
+      "label": ["Indoor", "succulent"],
+      "price": 59.99,
+      "isInSale": true,
+      "discountPercentage": 15,
+      "features": [
+        "Species: Schlumbergera bridgesii",
+        "Mature Size: Up to 12 inches (30 cm) in height and width.",
+        "Blooming Season: Typically blooms in winter, around Christmas.",
+        "Pot Size: Available in 4-inch and 6-inch pots.",
+        "Shipping: Shipped with care to ensure plants arrive healthy."
+      ],
+      "description": "The Christmas Cactus blooms with vibrant flowers in the winter. It prefers indirect sunlight and regular watering but is prone to root rot if overwatered.",
       "imgUrl": "/src/assets/img0-container-3.png"
     },
     {
-      "id": "dae8",
-      "name": "teste",
-      "subtitle": "plantaTeste",
-      "price": 100,
-      "discountPercentage": 10,
-      "label": [
-        "indoor",
-        "teste"
+      "id": "4",
+      "name": "Hedgehog Cactus",
+      "subtitle": "A Spiky Yet Charming Plant for Your Collection",
+      "label": ["Outdoor", "cactus"],
+      "price": 79.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Echinocereus engelmannii",
+        "Mature Size: 6 to 20 inches (15-50 cm) in height.",
+        "Blooming Season: Spring to early summer.",
+        "Pot Size: Available in 6-inch, 8-inch, and 10-inch pots.",
+        "Shipping: Securely packaged to ensure safe delivery."
       ],
-      "features": "dfdfd",
-      "description": "dfdfd",
+      "description": "The Hedgehog Cactus is known for its beautiful pink flowers. It requires full sun and well-drained soil to thrive.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Old Lady Cactus",
+      "subtitle": "A Delightful and Hardy Cactus for Enthusiasts",
+      "label": ["Indoor", "cactus"],
+      "price": 69.99,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Mammillaria hahniana",
+        "Mature Size: Up to 10 inches (25 cm) in height.",
+        "Blooming Season: Spring and summer.",
+        "Pot Size: Available in 4-inch, 6-inch, and 8-inch pots.",
+        "Shipping: Packaged with care for safe arrival."
+      ],
+      "description": "The Old Lady Cactus is characterized by its white hair-like spines and pink flowers. It prefers bright sunlight and minimal watering.",
+      "imgUrl": "/src/assets/img2-container3.png"
+    },
+    {
+      "id": "6",
+      "name": "Blue Torch Cactus",
+      "subtitle": "An Exotic and Eye-Catching Addition to Your Space",
+      "label": ["Indoor", "cactus"],
+      "price": 89.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Pilosocereus pachycladus",
+        "Mature Size: Up to 10 feet (3 meters) in height.",
+        "Blooming Season: Summer.",
+        "Pot Size: Available in 8-inch and 10-inch pots.",
+        "Shipping: Shipped with utmost care to ensure plant health."
+      ],
+      "description": "The Blue Torch Cactus has a stunning blue-green color and can grow quite tall. It requires full sun and occasional watering.",
+      "imgUrl": "/src/assets/img1-container-3.png"
+    },
+    {
+      "id": "7",
+      "name": "Fairy Castle Cactus",
+      "subtitle": "A Whimsical and Unique Cactus for Your Collection",
+      "label": ["Indoor", "cactus"],
+      "price": 49.99,
+      "isInSale": true,
+      "discountPercentage": 25,
+      "features": [
+        "Species: Acanthocereus tetragonus",
+        "Mature Size: Up to 6 feet (1.8 meters) in height.",
+        "Blooming Season: Rarely blooms Indoors.",
+        "Pot Size: Available in 4-inch, 6-inch, and 8-inch pots.",
+        "Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Fairy Castle Cactus is known for its whimsical, castle-like shape. It thrives in bright sunlight and well-drained soil.",
       "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "8",
+      "name": "Moon Cactus",
+      "subtitle": "A Vibrant and Colorful Addition to Your Home",
+      "label": ["Outdoor", "succulent"],
+      "price": 39.99,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Gymnocalycium mihanovichii",
+        "Mature Size: 2 to 6 inches (5-15 cm) in height.",
+        "Blooming Season: Rarely blooms Indoors.",
+        "Pot Size: Available in 3-inch and 4-inch pots.",
+        "Shipping: Securely packaged to ensure safe arrival."
+      ],
+      "description": "The Moon Cactus is notable for its bright, colorful top grafted onto a green base. It requires indirect sunlight and minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Peace Lily",
+      "subtitle": "A Graceful and Air-Purifying Plant",
+      "label": ["Indoor", "flower"],
+      "price": 29.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Spathiphyllum spp.",
+        "Mature Size: Up to 3 feet (90 cm) in height.",
+        "Blooming Season: Blooms throughout the year, with more frequent blooms in spring and summer.",
+        "Pot Size: Available in 6-inch, 8-inch, and 10-inch pots.",
+        "Shipping: Carefully packaged to ensure safe arrival."
+      ],
+      "description": "The Peace Lily is known for its elegant white flowers and ability to purify the air. It thrives in low to medium light and prefers consistently moist soil.",
+      "imgUrl": "/src/assets/img2-container3.png"
+    },
+    {
+      "id": "10",
+      "name": "Orchid",
+      "subtitle": "An Exotic and Elegant Flower for Any Space",
+      "label": ["Indoor", "flower"],
+      "price": 49.99,
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": [
+        "Species: Phalaenopsis spp.",
+        "Mature Size: Up to 2 feet (60 cm) in height.",
+        "Blooming Season: Typically blooms once a year, with flowers lasting several weeks.",
+        "Pot Size: Available in 4-inch and 6-inch pots.",
+        "Shipping: Carefully packaged to ensure safe arrival."
+      ],
+      "description": "The Orchid is celebrated for its stunning and delicate flowers. It requires indirect sunlight and humid conditions, making it a perfect Indoor plant.",
+      "imgUrl": "/src/assets/img1-container-3.png"
+    },
+    {
+      "id": "11",
+      "name": "African Violet",
+      "subtitle": "A Classic and Charming Flower for Your Home",
+      "label": ["Indoor", "flower"],
+      "price": 19.99,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Saintpaulia spp.",
+        "Mature Size: Up to 8 inches (20 cm) in height.",
+        "Blooming Season: Blooms year-round with proper care.",
+        "Pot Size: Available in 4-inch and 6-inch pots.",
+        "Shipping: Carefully packaged to ensure safe arrival."
+      ],
+      "description": "The African Violet is known for its beautiful, velvety flowers and compact size. It prefers bright, indirect sunlight and regular watering.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "12",
+      "name": "Bromeliad",
+      "subtitle": "A Tropical Touch for Your Indoor Garden",
+      "label": ["Indoor", "flower"],
+      "price": 29.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Bromeliaceae spp.",
+        "Mature Size: Up to 18 inches (45 cm) in height.",
+        "Blooming Season: Typically blooms once in its lifetime, lasting several months.",
+        "Pot Size: Available in 6-inch and 8-inch pots.",
+        "Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "Bromeliads are striking plants with bright, colorful flowers. They thrive in bright, indirect light and require minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Kalanchoe",
+      "subtitle": "A Vibrant and Low-Maintenance Flower",
+      "label": ["Indoor", "succulent"],
+      "price": 24.99,
+      "isInSale": true,
+      "discountPercentage": 15,
+      "features": [
+        "Species: Kalanchoe blossfeldiana",
+        "Mature Size: Up to 12 inches (30 cm) in height.",
+        "Blooming Season: Blooms in late winter to spring.",
+        "Pot Size: Available in 4-inch and 6-inch pots.",
+        "Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "Kalanchoe is a popular succulent known for its clusters of bright, long-lasting flowers. It prefers bright sunlight and infrequent watering.",
+      "imgUrl": "/src/assets/img2-container3.png"
+    },
+    {
+      "id": "14",
+      "name": "Jasmine",
+      "subtitle": "A Fragrant and Elegant Flowering Plant",
+      "label": ["Indoor", "flower"],
+      "price": 34.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Jasminum spp.",
+        "Mature Size: Up to 3 feet (90 cm) in height.",
+        "Blooming Season: Typically blooms in late winter to early spring.",
+        "Pot Size: Available in 6-inch and 8-inch pots.",
+        "Shipping: Securely packaged to ensure safe arrival."
+      ],
+      "description": "Jasmine is known for its sweet fragrance and beautiful white or yellow flowers. It prefers bright, indirect sunlight and moderate watering.",
+      "imgUrl": "/src/assets/img1-container-3.png"
+    },
+    {
+      "id": "15",
+      "name": "Begonia",
+      "subtitle": "A Colorful and Versatile Flowering Plant",
+      "label": ["Indoor", "flower"],
+      "price": 22.99,
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": [
+        "Species: Begonia spp.",
+        "Mature Size: Up to 18 inches (45 cm) in height.",
+        "Blooming Season: Blooms year-round with proper care.",
+        "Pot Size: Available in 4-inch, 6-inch, and 8-inch pots.",
+        "Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "Begonias are known for their colorful flowers and attractive foliage. They thrive in bright, indirect light and require regular watering.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "16",
+      "name": "Anthurium",
+      "subtitle": "A Bold and Long-Lasting Flower",
+      "label": ["Indoor", "flower"],
+      "price": 39.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Anthurium andraeanum",
+        "Mature Size: Up to 20 inches (50 cm) in height.",
+        "Blooming Season: Blooms year-round with proper care.",
+        "Pot Size: Available in 6-inch and 8-inch pots.",
+        "Shipping: Securely packaged to ensure safe arrival."
+      ],
+      "description": "Anthuriums are known for their shiny, heart-shaped flowers and leaves. They prefer bright, indirect light and consistently moist soil.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Azalea",
+      "subtitle": "A Stunning and Showy Flowering Shrub",
+      "label": ["Indoor", "flower"],
+      "price": 29.99,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Rhododendron spp.",
+        "Mature Size: Up to 4 feet (120 cm) in height.",
+        "Blooming Season: Blooms in spring.",
+        "Pot Size: Available in 6-inch and 8-inch pots.",
+        "Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "Azaleas are popular for their vibrant and abundant flowers. They prefer bright, indirect sunlight and regular watering.",
+      "imgUrl": "/src/assets/img2-container3.png"
+    },
+    {
+      "id": "18",
+      "name": "Geranium",
+      "subtitle": "A Bright and Cheerful Flowering Plant",
+      "label": ["Indoor", "flower"],
+      "price": 19.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Pelargonium spp.",
+        "Mature Size: Up to 24 inches (60 cm) in height.",
+        "Blooming Season: Blooms from spring to fall.",
+        "Pot Size: Available in 4-inch, 6-inch, and 8-inch pots.",
+        "Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "Geraniums are known for their bright flowers and pleasant scent. They prefer full sun and well-drained soil.",
+      "imgUrl": "/src/assets/img1-container-3.png"
+    },
+    {
+      "id": "19",
+      "name": "Petunia",
+      "subtitle": "A Versatile and Colorful Flowering Plant",
+      "label": ["Indoor", "flower"],
+      "price": 15.99,
+      "isInSale": true,
+      "discountPercentage": 20,
+      "features": [
+        "Species: Petunia spp.",
+        "Mature Size: Up to 18 inches (45 cm) in height.",
+        "Blooming Season: Blooms from spring to fall.",
+        "Pot Size: Available in 4-inch, 6-inch, and 8-inch pots.",
+        "Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "Petunias are popular for their vibrant, trumpet-shaped flowers. They thrive in full sun and well-drained soil.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "20",
+      "name": "Pansy",
+      "subtitle": "A Hardy and Colorful Flower for Any Season",
+      "label": ["Indoor", "flower"],
+      "price": 12.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Viola tricolor var. hortensis",
+        "Mature Size: Up to 9 inches (23 cm) in height.",
+        "Blooming Season: Blooms from fall to spring.",
+        "Pot Size: Available in 4-inch and 6-inch pots.",
+        "Shipping: Securely packaged to ensure safe arrival."
+      ],
+      "description": "Pansies are known for their colorful, heart-shaped flowers and ability to bloom in cooler weather. They prefer partial sun and moist soil.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "71455",
+      "name": "Snake Plant",
+      "subtitle": "A Stylish and Low Maintenance Plant",
+      "label": ["Indoor", "Succulent"],
+      "price": 24.99,
+      "isInSale": true,
+      "discountPercentage": 15,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms Indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "256485",
+      "name": "Spider Plant",
+      "subtitle": "An Air Purifying Plant with Graceful Foliage",
+      "label": ["Indoor", "Plant"],
+      "price": 19.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Chlorophytum comosum",
+        "     Mature Size: Up to 2 feet (60 cm) in height.",
+        "     Blooming Season: Occasionally blooms Indoors with small white flowers.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "The Spider Plant is easy to care for and produces long, arching leaves. It prefers bright, indirect light and regular watering.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "38274",
+      "name": "Philodendron",
+      "subtitle": "A Versatile and Easy to Grow Plant",
+      "label": ["Indoor", "Plant"],
+      "price": 17.99,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Philodendron spp.",
+        "     Mature Size: Up to 6 feet (1.8 meters) in height.",
+        "     Blooming Season: Rarely blooms Indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "Philodendrons are known for their lush foliage and ability to thrive in various light conditions. They prefer moderate to bright, indirect light.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "701275",
+      "name": "Snake Plant",
+      "subtitle": "A Stylish and Low Maintenance Plant",
+      "label": ["Indoor", "Succulent"],
+      "price": 24.99,
+      "isInSale": true,
+      "discountPercentage": 15,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img0-container-3.png"
+    },
+    {
+      "id": "292038",
+      "name": "Rubber Plant",
+      "subtitle": "A Classic and Elegant Foliage Plant",
+      "label": ["Outdoor", "Plant"],
+      "price": 29.99,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Ficus elastica",
+        "     Mature Size: Up to 6 feet (1.8 meters) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 8-inch and 10-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Rubber Plant has glossy, deep green leaves and adds a touch of elegance to any room. It prefers bright, indirect light and moderate watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "340772",
+      "name": "Snake Plant",
+      "subtitle": "A Stylish and Low Maintenance Plant",
+      "label": ["Indoor", "Succulent"],
+      "price": 24.99,
+      "isInSale": true,
+      "discountPercentage": 15,
+      "features": [
+        "Species: Philodendron spp.",
+        "     Mature Size: Up to 6 feet (1.8 meters) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "Philodendrons are known for their lush foliage and ability to thrive in various light conditions. They prefer moderate to bright, indirect light.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "949472",
+      "name": "Cactu",
+      "subtitle": "Cactu",
+      "label": ["Indoor", "Deserto"],
+      "price": 20,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "65248",
+      "name": "Cactu teste",
+      "subtitle": "Teste promo",
+      "label": ["Indoor", "Promo"],
+      "price": 50,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]
 }
