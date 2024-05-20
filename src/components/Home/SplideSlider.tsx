@@ -1,14 +1,13 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/css";
-import PlantCard from "./PlantCard";
-import { IPlantProps } from "../../types/plant";
+import { Splide, SplideSlide } from "@splidejs/react-splide"
+import "@splidejs/splide/css"
+import PlantCard from "./PlantCard"
+import { IPlantProps } from "../../types/plant"
 
 type Data = {
   plants: IPlantProps[]
 }
 
-const SplideSlider = ( {plants} : Data) => {
-
+const SplideSlider = ({ plants }: Data) => {
   return (
     <Splide
       options={{
@@ -21,7 +20,7 @@ const SplideSlider = ( {plants} : Data) => {
         rewind: false,
         autoWidth: true,
         autoHeight: true,
-        gap: "2rem"
+        gap: "2rem",
       }}
       aria-label="My favorite Images"
     >
@@ -39,7 +38,7 @@ const SplideSlider = ( {plants} : Data) => {
         </SplideSlide>
       ))}
     </Splide>
-  );
-};
+  )
+}
 
-export default SplideSlider;
+export default SplideSlider

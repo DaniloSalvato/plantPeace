@@ -1,12 +1,12 @@
-import imgFirst from "../../assets/img0-container-2.png";
-import imgSecond from "../../assets/img1-container-2.png";
-import imgThird from "../../assets/img2-container2.png";
+import imgFirst from "../../assets/img0-container-2.png"
+import imgSecond from "../../assets/img1-container-2.png"
+import imgThird from "../../assets/img2-container2.png"
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-import { FiDroplet } from "react-icons/fi";
-import { FiSun } from "react-icons/fi";
-import { FiShoppingBag } from "react-icons/fi";
+import { FiDroplet } from "react-icons/fi"
+import { FiSun } from "react-icons/fi"
+import { FiShoppingBag } from "react-icons/fi"
 
 const PlantCare = () => {
   return (
@@ -113,7 +113,7 @@ const PlantCare = () => {
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default PlantCare;
+export default PlantCare

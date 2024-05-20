@@ -1,7 +1,7 @@
-import Discover from "../components/Home/Discover";
-import PlantCare from "../components/Home/PlantCare";
-import Promotion from "../components/Home/Promotion";
-import Sales from "../components/Home/Sales";
+import Discover from "../components/Home/Discover"
+import PlantCare from "../components/Home/PlantCare"
+import Promotion from "../components/Home/Promotion"
+import Sales from "../components/Home/Sales"
 
 const Home = () => {
   return (
@@ -10,8 +10,8 @@ const Home = () => {
       <PlantCare />
       <Sales />
       <Promotion />
-     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Home;
+export default Home
