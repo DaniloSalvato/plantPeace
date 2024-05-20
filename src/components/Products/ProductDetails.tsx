@@ -51,7 +51,7 @@ export default function ProductDetails() {
         </div>
 
         {plant.discountPercentage ? (
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-5">
             <p className="font-lato text-xl font-bold line-through text-customGray">
               {formatPrice(plant.price)}
             </p>
@@ -63,7 +63,7 @@ export default function ProductDetails() {
             </p>
           </div>
         ) : (
-          <p className="font-lato text-xl font-bold">
+          <p className="font-lato text-xl font-bold mb-5">
             {formatPrice(plant.price)}
           </p>
         )}

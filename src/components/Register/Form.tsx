@@ -4,6 +4,7 @@ import imgRight from "../../assets/main-plant.png";
 
 import { IFormErrors, IPlantFormState } from "../../types/plant";
 import Modal from "./Modal";
+import { NumericFormat } from "react-number-format";
 
 const Form = () => {
   const [plantForm, setPlantForm] = useState<IPlantFormState>({
@@ -294,7 +295,8 @@ const Form = () => {
               <label className="text-customIBBNB font-medium text-sm">
                 Price
               </label>
-              <input
+              <NumericFormat
+                prefix="$"
                 type="text"
                 name="price"
                 value={plantForm.price}
@@ -303,7 +305,9 @@ const Form = () => {
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
-                    price: parseFloat(e.target.value) || 0,
+                    price:
+                      +e.target.value.replace(/\$/g, "").replace(/,/g, ".") ||
+                      0,
                   }))
                 }
               />
@@ -316,7 +320,8 @@ const Form = () => {
               <label className="text-customIBBNB font-medium text-sm">
                 Discount percentage
               </label>
-              <input
+              <NumericFormat
+                suffix="%"
                 type="text"
                 name="discountPercentage"
                 value={plantForm.discountPercentage}
@@ -325,7 +330,7 @@ const Form = () => {
                 onChange={(e) =>
                   setPlantForm((prev) => ({
                     ...prev,
-                    discountPercentage: parseFloat(e.target.value) || 0,
+                    discountPercentage: +e.target.value.replace(/%/g, "") || 0,
                   }))
                 }
               />

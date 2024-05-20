@@ -545,6 +545,48 @@
       ],
       "description": "Philodendrons are known for their lush foliage and ability to thrive in various light conditions. They prefer moderate to bright, indirect light.",
       "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "949472",
+      "name": "Cactu",
+      "subtitle": "Cactu",
+      "label": [
+        "Indoor",
+        "Deserto"
+      ],
+      "price": 20,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "65248",
+      "name": "Cactu teste",
+      "subtitle": "Teste promo",
+      "label": [
+        "Indoor",
+        "Promo"
+      ],
+      "price": 50,
+      "isInSale": true,
+      "discountPercentage": 10,
+      "features": [
+        "Species: Sansevieria trifasciata",
+        "     Mature Size: Up to 3 feet (90 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Carefully packaged for safe delivery."
+      ],
+      "description": "The Snake Plant is known for its striking foliage and air-purifying qualities. It thrives in low light conditions and requires minimal watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]
 }
