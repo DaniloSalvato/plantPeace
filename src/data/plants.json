@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": ["Indoor", "cactus"],
+      "label": ["indoor", "cactus"],
       "price": 139.99,
       "isInSale": true,
       "discountPercentage": 20,
