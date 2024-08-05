@@ -34,7 +34,7 @@ const Form = () => {
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       const stringRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/
-      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\(\)\:\,\.\'"\-]*$/
+      const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s():,.'"-]*$/
 
       e.preventDefault()
 

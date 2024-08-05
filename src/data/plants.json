@@ -5,7 +5,7 @@
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
-        "indoor",
+        "Indoor",
         "cactus"
       ],
       "price": 139.99,
@@ -426,7 +426,7 @@
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
-        "Succulent"
+        "succulent"
       ],
       "price": 24.99,
       "isInSale": true,
@@ -447,7 +447,7 @@
       "subtitle": "An Air Purifying Plant with Graceful Foliage",
       "label": [
         "Indoor",
-        "Plant"
+        "plant"
       ],
       "price": 19.99,
       "isInSale": false,
@@ -468,7 +468,7 @@
       "subtitle": "A Versatile and Easy to Grow Plant",
       "label": [
         "Indoor",
-        "Plant"
+        "plant"
       ],
       "price": 17.99,
       "isInSale": false,
@@ -489,7 +489,7 @@
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
-        "Succulent"
+        "succulent"
       ],
       "price": 24.99,
       "isInSale": true,
@@ -510,7 +510,7 @@
       "subtitle": "A Classic and Elegant Foliage Plant",
       "label": [
         "Outdoor",
-        "Plant"
+        "plant"
       ],
       "price": 29.99,
       "isInSale": true,
@@ -531,7 +531,7 @@
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
-        "Succulent"
+        "succulent"
       ],
       "price": 24.99,
       "isInSale": true,
@@ -594,7 +594,7 @@
       "subtitle": "A Hardy and Stylish Addition to Any Space",
       "label": [
         "Outdoor",
-        "Succulent"
+        "succulent"
       ],
       "price": 27.99,
       "isInSale": true,
@@ -607,6 +607,44 @@
         "     Shipping: Carefully packaged for safe delivery."
       ],
       "description": "The ZZ Plant is known for its glossy, dark green leaves and low maintenance care requirements. It thrives in low light conditions and infrequent watering.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "370556",
+      "name": "Parlor Palm",
+      "subtitle": "A Petite and Elegant Palm for Small Spaces",
+      "label": [
+        "Indoor",
+        "plant"
+      ],
+      "price": 100,
+      "isInSale": true,
+      "discountPercentage": 50,
+      "features": [
+        "Species: Chamaedorea elegans",
+        "     Mature Size: Up to 4 feet (120 cm) in height.",
+        "     Blooming Season: Rarely blooms indoors.",
+        "     Pot Size: Available in 6-inch and 8-inch pots.",
+        "     Shipping: Securely packaged to ensure safe delivery."
+      ],
+      "description": "The Parlor Palm",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "737110",
+      "name": "Asdihgasghjdas",
+      "subtitle": "Asdfadf",
+      "label": [
+        "Indoor",
+        "plant"
+      ],
+      "price": 123,
+      "isInSale": false,
+      "discountPercentage": 0,
+      "features": [
+        "asdasdasdasd"
+      ],
+      "description": "asdasdasdasd",
       "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]

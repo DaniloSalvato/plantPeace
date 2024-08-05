@@ -6,7 +6,6 @@ export default function Products() {
       <h1 className="font-garamondSerif font-bold text-customLunarGreen text-4xl">
         Products
       </h1>
-
       <ProductsSection />
     </main>
   )

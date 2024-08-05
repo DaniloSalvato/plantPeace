@@ -1,5 +1,5 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide"
-import "@splidejs/splide/css"
+import { Splide, SplideSlide } from "react-splide-ts";
+import "react-splide-ts/css";
 import PlantCard from "./PlantCard"
 import { IPlantProps } from "../../types/plant"
 
