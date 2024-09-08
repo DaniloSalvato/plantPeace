@@ -49,10 +49,10 @@ const Filter = () => {
         </button>
       )}
       <div
-        className={`fixed top-[289px] left-10 bg-customWisper z-50 transition-transform duration-300 ease-in-out border-2 border-customLunarGreen rounded-lg ${
+        className={`fixed top-[289px] left-10 bg-customWisper z-50 transition-all duration-300 ease-in-out border-2 border-customLunarGreen rounded-lg ${
           isOpen
-            ? "opacity-100 transform translate-x-0 w-3/4 h-[200px] p-5 md:w-1/3 md:h-[400px] lg:w-[25%] overflow-y-auto"
-            : "opacity-0 transform -translate-x-full w-3/4 h-[200px] p-5 md:w-1/3 md:h-[400px] lg:w-[25%]  overflow-y-auto"
+            ? "opacity-100 translate-x-0 w-3/4 h-[200px] p-5 md:w-1/3 md:h-[400px] lg:w-[25%] overflow-y-auto"
+            : "opacity-0 -translate-x-full w-3/4 h-[200px] p-5 md:w-1/3 md:h-[400px] lg:w-[25%]  overflow-y-auto"
         }`}
       >
         <div className="flex flex-col rounded-xl font-raleway">

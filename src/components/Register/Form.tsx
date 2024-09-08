@@ -178,7 +178,6 @@ const Form = () => {
 
   function removeQuotesAndSplit(text: string) {
     const cleanedText = text.replace(/"/g, "").replace(/\n/g, "")
-
     return cleanedText.split(", ")
   }
 
@@ -428,7 +427,8 @@ const Form = () => {
           </div>
           <button
             onClick={handleSubmit}
-            className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-8 py-2 transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen shadow-2xl"
+            type="submit"
+            className="font-inter text-sm w-full bg-customLunarGreen rounded-sm text-customWhite font-bold mt-8 py-2 transition-all hover:text-customLunarGreen hover:bg-customAvocado hover:ring-1 hover:ring-customLunarGreen shadow-2xl"
           >
             Register
           </button>

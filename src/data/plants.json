@@ -631,20 +631,24 @@
       "imgUrl": "/src/assets/img-promo.jpg"
     },
     {
-      "id": "737110",
-      "name": "Asdihgasghjdas",
-      "subtitle": "Asdfadf",
+      "id": "811280",
+      "name": "Tarlor Talm",
+      "subtitle": "A Petite and Elegant Palm for Small Spaces",
       "label": [
-        "Indoor",
-        "plant"
+        "Outdoor",
+        "Plant"
       ],
-      "price": 123,
-      "isInSale": false,
-      "discountPercentage": 0,
+      "price": 1000,
+      "isInSale": true,
+      "discountPercentage": 50,
       "features": [
-        "asdasdasdasd"
+        "Species: Chamaedorea elegans ",
+        "        Mature Size: Up to 4 feet (120 cm) in height.",
+        "        Blooming Season: Rarely blooms indoors.",
+        "        Pot Size: Available in 6-inch and 8-inch pots.",
+        "        Shipping: Securely packaged to ensure safe delivery."
       ],
-      "description": "asdasdasdasd",
+      "description": "The Tarlor Talm are known for their lush foliage and ability to thrive in various light conditions. They prefer moderate to bright, indirect light.",
       "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]

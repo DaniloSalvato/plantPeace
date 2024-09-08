@@ -55,9 +55,9 @@ export default function ProductsSection() {
    const isEmptyList = plants?.length === 0
 
   return (
-    <main className="flex w-full justify-center ">
-      <section>
-        <article className="flex flex-wrap justify-center gap-10">
+    <main className="flex w-full ">
+      <section className="w-full">
+        <article className="flex flex-wrap w-full">
           <Search />
         </article>
 
@@ -67,7 +67,7 @@ export default function ProductsSection() {
           {plants &&
             plants.map((plant) => <Product key={plant.id} {...plant} />)}
             
-            {isEmptyList && <p>Empty List</p>}
+            {isEmptyList && <div className="text-customSecondary text-xl md:text-4xl lg:text-6xl my-52">Are you sure about this plant?</div>}
         </article>
       </section>
     </main>

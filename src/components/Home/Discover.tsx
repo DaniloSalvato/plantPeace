@@ -26,7 +26,7 @@ const Discover = () => {
         </p>
 
         <Link to={"*"}>
-          <button className="flex justify-start py-2 px-7 mt-3 font-raleway text-customAthenaGrey bg-customLunarGreen shadow-2xl transition-all hover:text-customLunarGreen hover:bg-customWisper hover:ring-1 hover:ring-customLunarGreen ">
+          <button className="flex justify-start py-2 px-7 mt-3 font-raleway text-customAthenaGrey bg-customLunarGreen shadow-2xl transition-all hover:text-customLunarGreen hover:bg-customAccent hover:ring-1 hover:ring-customLunarGreen ">
             Shop now
           </button>
         </Link>

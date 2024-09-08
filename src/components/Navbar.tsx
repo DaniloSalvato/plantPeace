@@ -1,38 +1,40 @@
-import { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
-import plantPiece from "../assets/plantPiece-black.svg"
-import UserLogin from "./UserLogin"
-import burgerBtn from "../assets/burger-btn.svg"
-import closeBtn from "../assets/close-btn.svg"
+import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import plantPiece from "../assets/plantPiece-black.svg";
+import UserLogin from "./UserLogin";
+import burgerBtn from "../assets/burger-btn.svg";
+import closeBtn from "../assets/close-btn.svg";
 
 const Navbar = () => {
-  const [navBarExpanded, setNavBarExpanded] = useState<boolean>(false)
-  const [userLogin, setUserLogin] = useState<boolean>(true)
+  const [navBarExpanded, setNavBarExpanded] = useState<boolean>(false);
+  const [userLogin, setUserLogin] = useState<boolean>(true);
 
   useEffect(() => {
     function monitorScreenSize() {
       if (window.screen.width > 768) {
-        setUserLogin(true)
-        setNavBarExpanded(false)
-        setUserLogin(true)
-      } else setUserLogin(false)
+        setUserLogin(true);
+        setNavBarExpanded(false);
+        setUserLogin(true);
+      } else setUserLogin(false);
     }
 
-    monitorScreenSize()
-    window.addEventListener("load", monitorScreenSize)
-    window.addEventListener("resize", monitorScreenSize)
-  }, [userLogin, navBarExpanded])
+    monitorScreenSize();
+    window.addEventListener("load", monitorScreenSize);
+    window.addEventListener("resize", monitorScreenSize);
+  }, [userLogin, navBarExpanded]);
 
   const handleMenuBtnClick = () => {
-    setNavBarExpanded((prevState) => !prevState)
-  }
+    setNavBarExpanded((prevState) => !prevState);
+  };
 
   const shownMenuClasses =
-    "aria-expanded:block aria-expanded:absolute aria-expanded:right-0 aria-expanded:top-20 aria-expanded:bg-customWisper aria-expanded:w-full"
+    "aria-expanded:block aria-expanded:absolute aria-expanded:right-0 aria-expanded:top-20 aria-expanded:bg-customWisper aria-expanded:w-full";
 
   return (
     <header className="flex items-center justify-between font-raleway bg-customWisper p-4">
-      <img className="md:ml-16" src={plantPiece} alt="plantPeace logo" />
+      <Link to={"/home"}>
+        <img className="md:ml-16" src={plantPiece} alt="plantPeace logo" />
+      </Link>
       <nav
         id="navbar"
         aria-expanded={navBarExpanded}
@@ -80,7 +82,7 @@ const Navbar = () => {
         />
       </button>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -22,21 +22,21 @@ export default function ProductDetails() {
 
   if (!plant) {
     return (
-      <p className="text-center font-lato text-4xl font-bold h-screen mt-48">
+      <p className="flex justify-center items-center font-lato text-4xl font-bold h-screen mt-48 text-customLunarGreen">
         Loading...
       </p>
     )
   }
 
   return (
-    <div className="flex flex-wrap flex-col lg:my-20 lg:mx-28 lg:flex-row justify-center items-center gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 pb-[100px] lg:pb-[241px] lg:mt-20 lg:mx-28 lg:flex-row justify-center items-start gap-8 lg:gap-10 xl:gap-20">
       <img
-        className="flex h-screen w-full object-cover flex-1 p-4 lg:p-0"
+        className="flex h-screen w-full max-h-[420px] md:max-h-[690px] object-cover flex-1 p-4 lg:p-0"
         src={plant.imgUrl}
         alt={plant.name}
       />
 
-      <section className="w-full 2xl:h-screen flex flex-col items-start mb-4 px-4 lg:mt-0 lg:px-0 lg:mb-0 flex-1">
+      <section className="w-full flex flex-col items-start mb-4 px-4 lg:mt-0 lg:px-0 lg:mb-0 flex-1">
         <div className="font-bold">
           <h1 className="font-garamondSerif text-4xl sm:text-5xl text-customLunarGreen mb-2">
             {plant.name}
@@ -84,10 +84,10 @@ export default function ProductDetails() {
           </ul>
         </section>
 
-        <section className="*:p-2">
+        <section className="*:p-2 w-full">
           <h2 className="font-lato text-xl font-bold">Description</h2>
 
-          <p className="font-raleway 2xl:w-9/12">{plant.description}</p>
+          <p className="font-raleway lg:w-full 2xl:w-9/12">{plant.description}</p>
         </section>
       </section>
     </div>

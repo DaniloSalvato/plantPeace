@@ -7,28 +7,23 @@ const Search = () => {
   const [search, setSearch] = useState(() => searchParams.get("search") ?? "");
 
   return (
-    <div className="flex justify-center items-center my-6 w-full ">
-      <div className="flex w-1/3 justify-center items-center bg-white rounded-lg ">
+    <div className="flex justify-center px-6 items-center my-6 w-full ">
+      <div className="flex max-w-[600px] w-full justify-center items-center bg-white rounded-lg ">
         <CiSearch className="flex text-2xl text-customLunarGreen mx-1" />
         <input
           type="text"
           className="outline-none w-full py-2 pl-2 text-start rounded-lg font-raleway"
           placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setSearchParams((state) => {
+              state.set("search", e.target.value);
+              return state;
+            });
+          }}
           value={search}
         />
       </div>
-      <button
-        className="py-2 px-3 ml-3 font-raleway text-customAthenaGrey bg-customLunarGreen shadow-2xl transition-all hover:text-customLunarGreen hover:bg-customWisper border hover:border-customLunarGreen rounded-md"
-        onClick={() =>
-          setSearchParams((state) => {
-            state.set("search", search);
-            return state;
-          })
-        }
-      >
-        Search
-      </button>
     </div>
   );
 };

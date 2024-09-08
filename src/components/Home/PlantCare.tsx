@@ -26,7 +26,7 @@ const PlantCare = () => {
       <section className="flex flex-col justify-evenly items-center lg:flex-row text-center">
         <div className="flex flex-col gap-12 h-96 px-2 items-center xl:w-96">
           <Link to={"*"}>
-            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125">
+            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125 hover:text-customLunarGreen hover:bg-customAccent">
               <FiDroplet className="w-5 h-5" />
             </div>
           </Link>
@@ -42,7 +42,7 @@ const PlantCare = () => {
 
         <div className="flex flex-col gap-12 h-96 px-2 items-center xl:w-96">
           <Link to={"*"}>
-            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125">
+            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125 hover:text-customLunarGreen hover:bg-customAccent">
               <FiSun className="w-5 h-5" />
             </div>
           </Link>
@@ -59,7 +59,7 @@ const PlantCare = () => {
 
         <div className="flex flex-col gap-12 h-96 px-2 items-center xl:w-96">
           <Link to={"*"}>
-            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125">
+            <div className="flex justify-center items-center bg-customLunarGreen w-16 h-16 rounded-full transition-all text-white hover:scale-125 hover:text-customLunarGreen hover:bg-customAccent">
               <FiShoppingBag className="w-5 h-5" />
             </div>
           </Link>
@@ -106,7 +106,7 @@ const PlantCare = () => {
             joys of gardening with us!
           </p>
           <Link to={"*"}>
-            <button className="w-48 p-4 bg-customLunarGreen text-sm font-raleway text-customWhite text-center transition-all hover:text-customLunarGreen hover:bg-customWhite hover:ring-1 hover:ring-customLunarGreen hover:scale-105 shadow-2xl">
+            <button className="w-48 p-4 bg-customLunarGreen text-sm font-raleway text-customWhite text-center transition-all hover:text-customLunarGreen hover:bg-customAccent hover:ring-1 hover:ring-customLunarGreen hover:scale-105 shadow-2xl">
               See more photos
             </button>
           </Link>

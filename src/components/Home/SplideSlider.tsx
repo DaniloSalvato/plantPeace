@@ -24,8 +24,8 @@ const SplideSlider = ({ plants }: Data) => {
       }}
       aria-label="My favorite Images"
     >
-      {plants.map((plant: IPlantProps) => (
-        <SplideSlide key={plant.name}>
+      {plants.map((plant: IPlantProps, index) => (
+        <SplideSlide key={index}>
           <PlantCard
             id={plant.id}
             title={plant.name}

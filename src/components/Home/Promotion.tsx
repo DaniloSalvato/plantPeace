@@ -8,7 +8,7 @@ const Promotion = () => {
     async function getPlants() {
       const res = await fetch("http://localhost:3000/plants")
       const json = await res.json()
-      console.log(json)
+
       setPlants(json)
     }
     getPlants()
