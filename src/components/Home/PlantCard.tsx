@@ -22,7 +22,7 @@ const PlantCard = ({
   return (
     <>
       <Link to={`/product/${id}`}>
-        <div className="h-96 w-48 md:h-plantCard md:w-96 md:mb-3">
+        <div className="h-96 w-48 md:h-plantCard md:w-96 md:mb-3 hover:scale-110 transition ease-in ">
           <img src={imageUrl} />
 
           <div className="flex flex-col px-6 py-6 w-48 bg-customWhite shadow-lg shadow-b md:w-96">

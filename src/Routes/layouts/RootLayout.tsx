@@ -1,5 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom"
 import { ClerkProvider } from "@clerk/clerk-react"
+import Scroll from "../../components/Scroll"
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -17,6 +18,7 @@ export default function RootLayout() {
       publishableKey={PUBLISHABLE_KEY}
     >
       <main>
+        <Scroll/>
         <Outlet />
       </main>
     </ClerkProvider>

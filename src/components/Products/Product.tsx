@@ -13,7 +13,7 @@ export default function Product({
   discountPercentage,
 }: IPlantProps) {
   return (
-    <div className="flex flex-col gap-2 p-4 m-1 bg-customAthenaGrey rounded">
+    <div className="flex flex-col gap-2 p-4 m-1 bg-customAthenaGrey rounded hover:scale-105 transition ease-in">
       <img className="rounded" src={imgUrl} alt={name} />
 
       <h2 className="text-customLunarGreen font-bold text-2xl font-garamondSerif">

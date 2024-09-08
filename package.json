@@ -12,14 +12,14 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.1.0",
     "@splidejs/react-splide": "^0.7.12",
-    "@splidejs/splide": "^4.1.4",
     "json-server": "^1.0.0-beta.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
     "react-input-mask": "^2.0.4",
     "react-number-format": "^5.3.4",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-splide-ts": "^0.7.14"
   },
   "devDependencies": {
     "@types/react": "^18.3.2",

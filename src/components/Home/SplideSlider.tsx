@@ -1,5 +1,5 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide"
-import "@splidejs/splide/css"
+import { Splide, SplideSlide } from "react-splide-ts";
+import "react-splide-ts/css";
 import PlantCard from "./PlantCard"
 import { IPlantProps } from "../../types/plant"
 
@@ -24,8 +24,8 @@ const SplideSlider = ({ plants }: Data) => {
       }}
       aria-label="My favorite Images"
     >
-      {plants.map((plant: IPlantProps) => (
-        <SplideSlide key={plant.name}>
+      {plants.map((plant: IPlantProps, index) => (
+        <SplideSlide key={index}>
           <PlantCard
             id={plant.id}
             title={plant.name}
