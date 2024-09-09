@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.1.0",
+    "@hookform/resolvers": "^3.9.0",
     "@splidejs/react-splide": "^0.7.12",
     "json-server": "^1.0.0-beta.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.0",
     "react-icons": "^5.2.1",
     "react-input-mask": "^2.0.4",
     "react-number-format": "^5.3.4",
     "react-router-dom": "^6.23.1",
-    "react-splide-ts": "^0.7.14"
+    "react-splide-ts": "^0.7.14",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.2",

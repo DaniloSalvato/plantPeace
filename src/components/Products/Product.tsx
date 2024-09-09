@@ -6,29 +6,29 @@ import { formatPrice } from "../../ts/formatPrice"
 export default function Product({
   id,
   imgUrl,
-  name,
+  title,
   subtitle,
   label,
   price,
-  discountPercentage,
+  discount,
 }: IPlantProps) {
   return (
     <div className="flex flex-col gap-2 p-4 m-1 bg-customAthenaGrey rounded hover:scale-105 transition ease-in">
-      <img className="rounded" src={imgUrl} alt={name} />
+      <img className="rounded" src={imgUrl} alt={title} />
 
       <h2 className="text-customLunarGreen font-bold text-2xl font-garamondSerif">
-        {name}
+        {title}
       </h2>
 
       <p className="text-customGray font-lato font-semibold">{subtitle}</p>
 
-      {discountPercentage ? (
+      {discount ? (
         <div className="flex gap-2">
           <p className="text-customGray font-lato font-bold text-lg line-through">
             {formatPrice(price)}
           </p>
           <p className="font-lato font-bold text-lg">
-            {formatPrice(price - (price * Number(discountPercentage)) / 100)}
+            {formatPrice(price - (price * Number(discount)) / 100)}
           </p>
         </div>
       ) : (

@@ -2,7 +2,7 @@
   "plants": [
     {
       "id": "1",
-      "name": "Echinocereus Cactus",
+      "title": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
         "Indoor",
@@ -10,7 +10,7 @@
       ],
       "price": 139.99,
       "isInSale": true,
-      "discountPercentage": 20,
+      "discount": 20,
       "features": [
         "Species: Echinocereus spp.",
         "Mature Size: Varies by species, typically ranging from 4 to 12 inches (10-30 cm) in height.",
@@ -23,7 +23,7 @@
     },
     {
       "id": "2",
-      "name": "Golden Barrel Cactus",
+      "title": "Golden Barrel Cactus",
       "subtitle": "A Striking Focal Point for Your Home",
       "label": [
         "Indoor",
@@ -31,7 +31,7 @@
       ],
       "price": 99.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Echinocactus grusonii",
         "Mature Size: Up to 3 feet (90 cm) in height and diameter.",
@@ -44,7 +44,7 @@
     },
     {
       "id": "3",
-      "name": "Christmas Cactus",
+      "title": "Christmas Cactus",
       "subtitle": "A Festive and Easy-to-Care-For Plant",
       "label": [
         "Indoor",
@@ -52,7 +52,7 @@
       ],
       "price": 59.99,
       "isInSale": true,
-      "discountPercentage": 15,
+      "discount": 15,
       "features": [
         "Species: Schlumbergera bridgesii",
         "Mature Size: Up to 12 inches (30 cm) in height and width.",
@@ -65,7 +65,7 @@
     },
     {
       "id": "4",
-      "name": "Hedgehog Cactus",
+      "title": "Hedgehog Cactus",
       "subtitle": "A Spiky Yet Charming Plant for Your Collection",
       "label": [
         "Outdoor",
@@ -73,7 +73,7 @@
       ],
       "price": 79.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Echinocereus engelmannii",
         "Mature Size: 6 to 20 inches (15-50 cm) in height.",
@@ -86,7 +86,7 @@
     },
     {
       "id": "5",
-      "name": "Old Lady Cactus",
+      "title": "Old Lady Cactus",
       "subtitle": "A Delightful and Hardy Cactus for Enthusiasts",
       "label": [
         "Indoor",
@@ -94,7 +94,7 @@
       ],
       "price": 69.99,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Mammillaria hahniana",
         "Mature Size: Up to 10 inches (25 cm) in height.",
@@ -107,7 +107,7 @@
     },
     {
       "id": "6",
-      "name": "Blue Torch Cactus",
+      "title": "Blue Torch Cactus",
       "subtitle": "An Exotic and Eye-Catching Addition to Your Space",
       "label": [
         "Indoor",
@@ -115,7 +115,7 @@
       ],
       "price": 89.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Pilosocereus pachycladus",
         "Mature Size: Up to 10 feet (3 meters) in height.",
@@ -128,7 +128,7 @@
     },
     {
       "id": "7",
-      "name": "Fairy Castle Cactus",
+      "title": "Fairy Castle Cactus",
       "subtitle": "A Whimsical and Unique Cactus for Your Collection",
       "label": [
         "Indoor",
@@ -136,7 +136,7 @@
       ],
       "price": 49.99,
       "isInSale": true,
-      "discountPercentage": 25,
+      "discount": 25,
       "features": [
         "Species: Acanthocereus tetragonus",
         "Mature Size: Up to 6 feet (1.8 meters) in height.",
@@ -149,7 +149,7 @@
     },
     {
       "id": "8",
-      "name": "Moon Cactus",
+      "title": "Moon Cactus",
       "subtitle": "A Vibrant and Colorful Addition to Your Home",
       "label": [
         "Outdoor",
@@ -157,7 +157,7 @@
       ],
       "price": 39.99,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Gymnocalycium mihanovichii",
         "Mature Size: 2 to 6 inches (5-15 cm) in height.",
@@ -170,7 +170,7 @@
     },
     {
       "id": "9",
-      "name": "Peace Lily",
+      "title": "Peace Lily",
       "subtitle": "A Graceful and Air-Purifying Plant",
       "label": [
         "Indoor",
@@ -178,7 +178,7 @@
       ],
       "price": 29.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Spathiphyllum spp.",
         "Mature Size: Up to 3 feet (90 cm) in height.",
@@ -191,7 +191,7 @@
     },
     {
       "id": "10",
-      "name": "Orchid",
+      "title": "Orchid",
       "subtitle": "An Exotic and Elegant Flower for Any Space",
       "label": [
         "Indoor",
@@ -199,7 +199,7 @@
       ],
       "price": 49.99,
       "isInSale": true,
-      "discountPercentage": 20,
+      "discount": 20,
       "features": [
         "Species: Phalaenopsis spp.",
         "Mature Size: Up to 2 feet (60 cm) in height.",
@@ -212,7 +212,7 @@
     },
     {
       "id": "11",
-      "name": "African Violet",
+      "title": "African Violet",
       "subtitle": "A Classic and Charming Flower for Your Home",
       "label": [
         "Indoor",
@@ -220,7 +220,7 @@
       ],
       "price": 19.99,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Saintpaulia spp.",
         "Mature Size: Up to 8 inches (20 cm) in height.",
@@ -233,7 +233,7 @@
     },
     {
       "id": "12",
-      "name": "Bromeliad",
+      "title": "Bromeliad",
       "subtitle": "A Tropical Touch for Your Indoor Garden",
       "label": [
         "Indoor",
@@ -241,7 +241,7 @@
       ],
       "price": 29.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Bromeliaceae spp.",
         "Mature Size: Up to 18 inches (45 cm) in height.",
@@ -254,7 +254,7 @@
     },
     {
       "id": "13",
-      "name": "Kalanchoe",
+      "title": "Kalanchoe",
       "subtitle": "A Vibrant and Low-Maintenance Flower",
       "label": [
         "Indoor",
@@ -262,7 +262,7 @@
       ],
       "price": 24.99,
       "isInSale": true,
-      "discountPercentage": 15,
+      "discount": 15,
       "features": [
         "Species: Kalanchoe blossfeldiana",
         "Mature Size: Up to 12 inches (30 cm) in height.",
@@ -275,7 +275,7 @@
     },
     {
       "id": "14",
-      "name": "Jasmine",
+      "title": "Jasmine",
       "subtitle": "A Fragrant and Elegant Flowering Plant",
       "label": [
         "Indoor",
@@ -283,7 +283,7 @@
       ],
       "price": 34.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Jasminum spp.",
         "Mature Size: Up to 3 feet (90 cm) in height.",
@@ -296,7 +296,7 @@
     },
     {
       "id": "15",
-      "name": "Begonia",
+      "title": "Begonia",
       "subtitle": "A Colorful and Versatile Flowering Plant",
       "label": [
         "Indoor",
@@ -304,7 +304,7 @@
       ],
       "price": 22.99,
       "isInSale": true,
-      "discountPercentage": 20,
+      "discount": 20,
       "features": [
         "Species: Begonia spp.",
         "Mature Size: Up to 18 inches (45 cm) in height.",
@@ -317,7 +317,7 @@
     },
     {
       "id": "16",
-      "name": "Anthurium",
+      "title": "Anthurium",
       "subtitle": "A Bold and Long-Lasting Flower",
       "label": [
         "Indoor",
@@ -325,7 +325,7 @@
       ],
       "price": 39.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Anthurium andraeanum",
         "Mature Size: Up to 20 inches (50 cm) in height.",
@@ -338,7 +338,7 @@
     },
     {
       "id": "17",
-      "name": "Azalea",
+      "title": "Azalea",
       "subtitle": "A Stunning and Showy Flowering Shrub",
       "label": [
         "Indoor",
@@ -346,7 +346,7 @@
       ],
       "price": 29.99,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Rhododendron spp.",
         "Mature Size: Up to 4 feet (120 cm) in height.",
@@ -359,7 +359,7 @@
     },
     {
       "id": "18",
-      "name": "Geranium",
+      "title": "Geranium",
       "subtitle": "A Bright and Cheerful Flowering Plant",
       "label": [
         "Indoor",
@@ -367,7 +367,7 @@
       ],
       "price": 19.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Pelargonium spp.",
         "Mature Size: Up to 24 inches (60 cm) in height.",
@@ -380,7 +380,7 @@
     },
     {
       "id": "19",
-      "name": "Petunia",
+      "title": "Petunia",
       "subtitle": "A Versatile and Colorful Flowering Plant",
       "label": [
         "Indoor",
@@ -388,7 +388,7 @@
       ],
       "price": 15.99,
       "isInSale": true,
-      "discountPercentage": 20,
+      "discount": 20,
       "features": [
         "Species: Petunia spp.",
         "Mature Size: Up to 18 inches (45 cm) in height.",
@@ -401,7 +401,7 @@
     },
     {
       "id": "20",
-      "name": "Pansy",
+      "title": "Pansy",
       "subtitle": "A Hardy and Colorful Flower for Any Season",
       "label": [
         "Indoor",
@@ -409,7 +409,7 @@
       ],
       "price": 12.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Viola tricolor var. hortensis",
         "Mature Size: Up to 9 inches (23 cm) in height.",
@@ -422,7 +422,7 @@
     },
     {
       "id": "71455",
-      "name": "Snake Plant",
+      "title": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
@@ -430,7 +430,7 @@
       ],
       "price": 24.99,
       "isInSale": true,
-      "discountPercentage": 15,
+      "discount": 15,
       "features": [
         "Species: Sansevieria trifasciata",
         "     Mature Size: Up to 3 feet (90 cm) in height.",
@@ -443,7 +443,7 @@
     },
     {
       "id": "256485",
-      "name": "Spider Plant",
+      "title": "Spider Plant",
       "subtitle": "An Air Purifying Plant with Graceful Foliage",
       "label": [
         "Indoor",
@@ -451,7 +451,7 @@
       ],
       "price": 19.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Chlorophytum comosum",
         "     Mature Size: Up to 2 feet (60 cm) in height.",
@@ -464,7 +464,7 @@
     },
     {
       "id": "38274",
-      "name": "Philodendron",
+      "title": "Philodendron",
       "subtitle": "A Versatile and Easy to Grow Plant",
       "label": [
         "Indoor",
@@ -472,7 +472,7 @@
       ],
       "price": 17.99,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Philodendron spp.",
         "     Mature Size: Up to 6 feet (1.8 meters) in height.",
@@ -485,7 +485,7 @@
     },
     {
       "id": "701275",
-      "name": "Snake Plant",
+      "title": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
@@ -493,7 +493,7 @@
       ],
       "price": 24.99,
       "isInSale": true,
-      "discountPercentage": 15,
+      "discount": 15,
       "features": [
         "Species: Sansevieria trifasciata",
         "     Mature Size: Up to 3 feet (90 cm) in height.",
@@ -506,7 +506,7 @@
     },
     {
       "id": "292038",
-      "name": "Rubber Plant",
+      "title": "Rubber Plant",
       "subtitle": "A Classic and Elegant Foliage Plant",
       "label": [
         "Outdoor",
@@ -514,7 +514,7 @@
       ],
       "price": 29.99,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Ficus elastica",
         "     Mature Size: Up to 6 feet (1.8 meters) in height.",
@@ -527,7 +527,7 @@
     },
     {
       "id": "340772",
-      "name": "Snake Plant",
+      "title": "Snake Plant",
       "subtitle": "A Stylish and Low Maintenance Plant",
       "label": [
         "Indoor",
@@ -535,7 +535,7 @@
       ],
       "price": 24.99,
       "isInSale": true,
-      "discountPercentage": 15,
+      "discount": 15,
       "features": [
         "Species: Philodendron spp.",
         "     Mature Size: Up to 6 feet (1.8 meters) in height.",
@@ -548,7 +548,7 @@
     },
     {
       "id": "949472",
-      "name": "Cactu",
+      "title": "Cactu",
       "subtitle": "Cactu",
       "label": [
         "Indoor",
@@ -556,7 +556,7 @@
       ],
       "price": 20,
       "isInSale": false,
-      "discountPercentage": 0,
+      "discount": 0,
       "features": [
         "Species: Sansevieria trifasciata",
         "     Mature Size: Up to 3 feet (90 cm) in height.",
@@ -569,7 +569,7 @@
     },
     {
       "id": "65248",
-      "name": "Cactu teste",
+      "title": "Cactu teste",
       "subtitle": "Teste promo",
       "label": [
         "Indoor",
@@ -577,7 +577,7 @@
       ],
       "price": 50,
       "isInSale": true,
-      "discountPercentage": 10,
+      "discount": 10,
       "features": [
         "Species: Sansevieria trifasciata",
         "     Mature Size: Up to 3 feet (90 cm) in height.",
@@ -590,7 +590,7 @@
     },
     {
       "id": "339540",
-      "name": "ZZ Plant",
+      "title": "ZZ Plant",
       "subtitle": "A Hardy and Stylish Addition to Any Space",
       "label": [
         "Outdoor",
@@ -598,7 +598,7 @@
       ],
       "price": 27.99,
       "isInSale": true,
-      "discountPercentage": 20,
+      "discount": 20,
       "features": [
         "Species: Zamioculcas zamiifolia",
         "     Mature Size: Up to 3 feet (90 cm) in height.",
@@ -611,7 +611,7 @@
     },
     {
       "id": "370556",
-      "name": "Parlor Palm",
+      "title": "Parlor Palm",
       "subtitle": "A Petite and Elegant Palm for Small Spaces",
       "label": [
         "Indoor",
@@ -619,7 +619,7 @@
       ],
       "price": 100,
       "isInSale": true,
-      "discountPercentage": 50,
+      "discount": 50,
       "features": [
         "Species: Chamaedorea elegans",
         "     Mature Size: Up to 4 feet (120 cm) in height.",
@@ -632,7 +632,7 @@
     },
     {
       "id": "811280",
-      "name": "Tarlor Talm",
+      "title": "Tarlor Talm",
       "subtitle": "A Petite and Elegant Palm for Small Spaces",
       "label": [
         "Outdoor",
@@ -640,7 +640,7 @@
       ],
       "price": 1000,
       "isInSale": true,
-      "discountPercentage": 50,
+      "discount": 50,
       "features": [
         "Species: Chamaedorea elegans ",
         "        Mature Size: Up to 4 feet (120 cm) in height.",
@@ -649,6 +649,25 @@
         "        Shipping: Securely packaged to ensure safe delivery."
       ],
       "description": "The Tarlor Talm are known for their lush foliage and ability to thrive in various light conditions. They prefer moderate to bright, indirect light.",
+      "imgUrl": "/src/assets/img-promo.jpg"
+    },
+    {
+      "id": "280451",
+      "title": "Asdfsdafasdf",
+      "subtitle": "Asdfsafasdf",
+      "type": "sdafasdf",
+      "price": 123123,
+      "discount": 12,
+      "label": [
+        "Indoor",
+        "Sdafasdf"
+      ],
+      "features": [
+        "sdfafasdfasdf",
+        "dsjhfkajsdkjhaskdjhas,asdhgasjkhgdhjagsd"
+      ],
+      "description": "asdfsadfasdfsdf",
+      "isInSale": true,
       "imgUrl": "/src/assets/img-promo.jpg"
     }
   ]

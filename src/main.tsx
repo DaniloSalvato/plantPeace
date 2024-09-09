@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from "./Routes/Home.tsx";
-import Register from "./Routes/Register.tsx";
+import Register from "./Pages/Register";
 import Products from "./Routes/Products.tsx";
 import AboutUs from "./Routes/AboutUs.tsx";
 import ProductDetailsPage from "./Routes/ProductDetailsPage.tsx";

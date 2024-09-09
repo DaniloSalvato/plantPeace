@@ -28,9 +28,9 @@ const SplideSlider = ({ plants }: Data) => {
         <SplideSlide key={index}>
           <PlantCard
             id={plant.id}
-            title={plant.name}
+            title={plant.title}
             price={+plant.price}
-            promo={+plant.discountPercentage}
+            promo={+plant.discount}
             isInSale={plant.isInSale}
             category={plant.label}
             imageUrl={plant.imgUrl}
