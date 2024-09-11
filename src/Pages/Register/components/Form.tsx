@@ -156,7 +156,7 @@ const Form = () => {
               Label:
             </legend>
 
-            <div>
+            <FormComponents.Article>
               <FormComponents.Input
               {...register('label')}
                 type="radio"
@@ -171,9 +171,9 @@ const Form = () => {
                   {errors?.label.message}
                 </p>
               )}
-            </div>
+            </FormComponents.Article>
 
-            <div>
+            <FormComponents.Article>
               <FormComponents.Input
               {...register('label')}
                 type="radio"
@@ -183,7 +183,7 @@ const Form = () => {
               <FormComponents.Label htmlFor="outdoor" className="px-1">
                 Outdoor
               </FormComponents.Label>
-            </div>
+            </FormComponents.Article>
           </fieldset>
 
           <FormComponents.Container>

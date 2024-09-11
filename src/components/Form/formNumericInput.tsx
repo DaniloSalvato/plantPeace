@@ -11,7 +11,7 @@ export const formNumericInput = forwardRef<HTMLInputElement, NumericInput>(
       <NumericFormat 
         {...props}
         customInput={()=> <Form.Input {...props} ref={ref}/>}
-        className="px-4 py-2 mt-2 w-full border border-customGray rounded text-sm text-black bg-customWisper"
+        className="px-4 py-2 w-full border border-customGray rounded text-sm text-black bg-customWisper"
       />
     );
   }

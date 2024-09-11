@@ -6,7 +6,7 @@ type ContainerProps = {
 
 export const formContainer = ({ children }: ContainerProps) => {
   return (
-    <article className="flex flex-col font-inter mt-4 text-sm">
+    <article className="flex flex-col font-inter mt-4 text-sm gap-2">
       {children}
     </article>
   );

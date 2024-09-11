@@ -5,9 +5,11 @@ import { formError } from "./formError";
 import { formContainer } from "./formContainer";
 import { formNumericInput } from "./formNumericInput";
 import { formTextArea } from "./formTextArea";
+import { formArticle } from "./formArticle";
 
 export const Form = {
   Container: formContainer,
+  Article: formArticle,
   Title: formTitle,
   Label: formLabel,
   Input: formInput,

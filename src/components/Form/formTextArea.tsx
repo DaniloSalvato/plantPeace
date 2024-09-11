@@ -8,7 +8,7 @@ export const formTextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       <textarea
         {...props}
         ref={ref}
-        className="border border-customGray rounded px-4 py-2 pb-10 mt-2 text-sm text-black bg-customWisper"
+        className="border border-customGray rounded px-4 py-2 pb-10 text-sm text-black bg-customWisper"
       />
     );
   }
